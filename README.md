@@ -46,6 +46,6 @@ This is an optional section, but list and link to resources, articles, and websi
 	
   * [Rails- ActiveRecord Validations](https://github.com/learn-co-curriculum/activerecord-validations-readme)
 	
-<a href='https://learn.co/lessons/readme-template' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/readme-template' title='All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. We'll include some technical markdown expecatios as well.'>All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. We'll include some technical markdown expecatios as well.</a> on Learn.co and start learning to code for free.</p>
 
 
