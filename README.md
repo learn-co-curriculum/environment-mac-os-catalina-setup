@@ -18,13 +18,13 @@ As a reminder, all repositories **must** have:
 
 ## `##` Overview
 
-A 1-2 sentence summary of what will be covered in the Reading. 
+A 1-2 sentence summary of what will be covered in the Reading. (In some cases if you feel this isn't necessary, then you can remove this.)
 
 ## `##` Objectives
 
- 1. Every reading should have a list of learning objectives that will describe what the student should be able to do or show after completing the lesson. Refer to the previous lessons on learning objectives for more info. 
+ 1. Every reading should have a list of learning objectives that will describe what the student should be able to do or show after completing the lesson. Refer to the previous lessons on learning objectives for more info. Typically we will provide you with the learning objectives already.
  2. It should be a numbered list, in most cases with around 3 to 7 items.
- 3. And written in the present-imperative tense. Overusing the verbs "learn", "recognize", "know", and "understand" should be avoided (e.g. good: "Run the test suite" vs bad: "Learn to run a test" or "Running tests." or "Know how to run a test").
+ 3. It should be written in the present-imperative tense. Overusing the verbs "learn", "recognize", "know", and "understand" should be avoided (e.g. good: "Run the test suite" vs bad: "Learn to run a test" or "Running tests." or "Know how to run a test").
 
 ## `##` Exposition
 
@@ -42,10 +42,10 @@ This is an optional section, but list and link to resources, articles, and websi
 
 ## Some Readme Examples:
 
-  * [SQL- Inserting, Selecting, Updating and Deleting Database Rows And Methods](https://github.com/learn-co-curriculum/sql-insert-select-update-code-along)
+  * [Javascript- Intro to Data Types](https://github.com/learn-co-curriculum/javascript-intro-to-data-types)
 	
-  * [Rails- ActiveRecord Validations](https://github.com/learn-co-curriculum/activerecord-validations-readme)
+  * [Swift- Functions](https://github.com/learn-co-curriculum/swift-functions-readme)
 	
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/readme-template' title='All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. We'll include some technical markdown expecatios as well.'>All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. We'll include some technical markdown expecatios as well.</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/readme-template' title='Readme Template.'>Readme Template.</p>
 
 
