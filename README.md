@@ -1,13 +1,4 @@
-All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. We'll include some technical markdown expecatios as well.
-
-As a reminder, all repositories **must** have:
-
-* a `.learn` file 
-* a `LICENSE.md` file for public-facing content
-* a `CONTRIBUTING.md` that outlines contribution guidelines 
-* a `README.md` that contains the content of the reading
-
-*Use the gem discussed earlier to add .learn, License, and Contributing files.*
+All Readmes should follow a similar format when it comes to how your content is structured, which we'll talk about more below. There are also some technical markdown expectations that we have as well. 
 
 ## Readme Outline:
 
