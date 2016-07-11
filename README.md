@@ -22,13 +22,13 @@ A 1-2 sentence summary of what will be covered in the Reading. (In some cases if
 
 ## `##` Objectives
 
- 1. Every reading should have a list of learning objectives that will describe what the student should be able to do or show after completing the lesson. Refer to the previous lessons on learning objectives for more info. Typically we will provide you with the learning objectives already.
+ 1. Every reading should have a list of learning objectives that will describe what the student should be able to do or show after completing the lesson. Typically we will provide you with the learning objectives already.
  2. It should be a numbered list, in most cases with around 3 to 7 items.
  3. It should be written in the present-imperative tense. Overusing the verbs "learn", "recognize", "know", and "understand" should be avoided (e.g. good: "Run the test suite" vs bad: "Learn to run a test" or "Running tests." or "Know how to run a test").
 
 ## `##` Exposition
 
-Remember to create a narrative that has a beginning, middle, and end. More on this in upcoming sentences.
+Remember to create a narrative that has a beginning, middle, and end. More on this in upcoming lessons.
 
 But for now, make sure you explain why we are learning what we are learning. Give a real-world or pseudo-real-world example of using the technology/skill being discussed or show the pain of solving the problem using only the knowledge students have up to this point. 
 
