@@ -153,7 +153,7 @@ Save and close the `~/.learn-config` file.
 
 #### Install Chrome
 
-Install Google Chrome and make Chrome your default browser.
+Install [Google Chrome][] and [make Chrome your default browser][default chrome].
 
 #### Install Slack
 
@@ -515,6 +515,10 @@ and password whenever you use the terminal to interact with GitHub.
 Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out. Follow
 the [instructions provided by GitHub][add ssh] and add this key to your GitHub account
 
+#### Install Chrome
+
+Install [Google Chrome][] and [make Chrome your default browser][default chrome].
+
 ### Install Slack
 
 Install Slack for Mac and enable desktop notifications for Slack. One week
@@ -548,3 +552,5 @@ you have completed the setup process and are ready to move on!
 [Oh My Zsh]: https://github.com/ohmyzsh/ohmyzsh
 [atom]: https://atom.io/
 [octocat gitignore]: https://gist.github.com/octocat/9257657
+[Google Chrome]: https://www.google.com/chrome/
+[default chrome]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
