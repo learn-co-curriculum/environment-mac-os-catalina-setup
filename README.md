@@ -57,6 +57,9 @@ If you do not see this message, an error may have occurred during installation.
 In this case, follow the step-by-step guide below for manually installing the
 necessary tools.
 
+> **Note:** If you are using a mac that is not on Catalina, you will need to 
+> restart terminal to beging using Zsh instead of Bash.
+
 ### Step 2 - Configure Git
 
 Git has been installed but still needs to be configured with your personal
