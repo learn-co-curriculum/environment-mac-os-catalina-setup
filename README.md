@@ -36,7 +36,7 @@ For convenience, we've written a script that will handle many installation
 steps for us. In your terminal, run the following:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/flatiron-school/... | bash
+curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
 ```
 
 Many tools will be downloaded and installed so this may take some time. During
