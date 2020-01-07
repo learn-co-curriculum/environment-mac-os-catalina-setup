@@ -130,6 +130,8 @@ Once Visual Studio Code is in your Applications folder, launch the program and
 type `⇧⌘P`, and your **Command Palette** will open. In your **Command Palette**,
 type `>shell command`. Select "Shell Command: Install 'code' command in PATH"
 
+![VS Code Add to Path](https://curriculum-content.s3.amazonaws.com/onboarding/vscode%20path.png)
+
 Next, let's install Visual Studio Code as your default text editor in the
 `.learn-config` file. First, open the config file for Learn in a text editor (Let's
 give Visual Studio Code a try!). If you successfully installed Visual Studio
