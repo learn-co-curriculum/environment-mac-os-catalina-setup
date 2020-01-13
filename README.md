@@ -4,20 +4,22 @@
 
 This Readme is a step-by-step guide for how to set up your local environment
 **on a Mac**. Please note that these instructions will not work for non-Mac
-users.
+users. If you're on a Windows 10 machine, see the [Windows Subsystem for Linux setup instructions](https://github.com/learn-co-curriculum/wsl-setup). If you're on an older windows machine, refer to the [Setting up Linux Virtual Box](https://help.learn.co/en/articles/1489324-setting-up-linux-virtual-box) instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
-but can upgrade, we recommend doing so before continuing.
+but can upgrade, we recommend doing so before continuing. You can check your 
+OS version by clicking the apple menu in the top left and clicking 'About This Mac'.
 
 If you are unable to upgrade to Catalina, additional instructions are included
 in the steps below.
 
 ## When to Move to a Local Environment
 
-For students online, INSERT WHAT TO DO
+For online students, you should switch to a local environment after your 
+Ruby CLI project, or sooner if recommended by an instructor.
 
-For students taking the in-person course, you should move to a local environment
-at the start of the course, just after the Prework.
+For in-person students, you should move to a local environment at the end of
+Prework, before you start on campus.
 
 ### Step 0
 
@@ -54,11 +56,11 @@ installation is complete as well as a few additional steps to take.
 ```
 
 If you do not see this message, an error may have occurred during installation.
-In this case, follow the step-by-step guide below for manually installing the
-necessary tools.
+In this case, follow the [step-by-step guide below](#step-by-step-instructions-for-manual-installation) 
+to manually install the necessary tools.
 
 > **Note:** If you are using a mac that is not on Catalina, you will need to 
-> restart terminal to beging using Zsh instead of Bash.
+> restart terminal to begin using Zsh instead of Bash.
 
 ### Step 2 - Configure Git
 
@@ -69,7 +71,7 @@ account information. First, run the following to add your GitHub account name:
 git config --global user.name <YOUR USERNAME>
 ```
 
-Replacing `<YOUR USERNAME>` with your actual account username. We also want
+Replace `<YOUR USERNAME>` with your actual account username. We also want
 to add the email account associated with your account. Run the command below to do so:
 
 ```sh
