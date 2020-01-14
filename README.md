@@ -104,6 +104,8 @@ cat ~/.ssh/id_rsa.pub
 Go to https://github.com, sign in, and navigate to SSH and GPG keys in Settings.
 Create a new SSH key and copy and paste your SSH key in.
 
+For more information, check out [GitHub's help article on adding SSH keys][add ssh].
+
 ## Step 4 - Configure the Learn Gem
 
 Now we need to set up the Learn gem. Type the following into your terminal:
