@@ -265,6 +265,8 @@ by running:
 chsh -s /bin/zsh
 ```
 
+Zsh will start the next time you open your terminal.
+
 ### Install Ruby Version Manager
 
 RVM is a tool that lets you run different versions of Ruby on your computer. If
