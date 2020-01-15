@@ -15,11 +15,24 @@ in the steps below.
 
 ## When to Move to a Local Environment
 
-For online students, you should switch to a local environment after your 
+For online students, you should switch to a local environment after your
 Ruby CLI project, or sooner if recommended by an instructor.
 
 For in-person students, you should move to a local environment at the end of
 Prework, before you start on campus.
+
+## Using the Automatic Installation Script
+
+For convenience, we've written a script that will handle many installation steps
+for us. Follow the steps below to run this script. After the script runs, some
+additional configuration will be needed as described in steps 2 through 6. The
+final step is to run a validation script that will check to see if your environment
+is good to go.
+
+> **Note:** In the event that the automatic installation script fails or the
+> validation script shows some things did not install correctly, manual
+> installation instructions are provided in the second half of this lesson. Use
+> these instructions to install any missing tools.
 
 ### Step 0
 
@@ -27,15 +40,14 @@ First, if you've downloaded the Learn IDE, you will need to uninstall it. For
 detailed instructions on how to properly uninstall the IDE, please read this
 [Help Center article][uninstall IDE].
 
-### Step 1 - Run Automatic Install Script
+### Step 1 - Run Automatic Installation Script
 
 Open up your Terminal. The terminal is where we are going to be doing most of our
 installation steps! On Mac, you can open up your terminal by going to
 Applications > Utilities > Terminal, or by using the quick launch (cmd + space)
 and just start typing “Terminal”.
 
-For convenience, we've written a script that will handle many installation
-steps for us. In your terminal, run the following:
+In your terminal, run the following:
 
 ```sh
 curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
@@ -183,13 +195,29 @@ you have completed the setup process and can move on!
 > **Note** If there are any failed checks, use the manual install instructions
 > below to install everything one at a time.
 
----
+...
+
+...
+
+...
+
+...
+
+...
+
+...
+
+# STOP!
+
+The instructions below are provided if the automatic install script fails, the
+validation script indicates incomplete installations, or you would prefer to
+manually step through the installation process. Some steps above are repeated in
+the instructions below.
+
+**If you ran the validation script above and everything passes, you do not need
+to continue reading and can move on to the next lesson**
 
 ## Step By Step Instructions for Manual Installation
-
-The instructions below are provided if the automatic install script
-fails or you would prefer to manually step through the process. Some
-steps above are repeated in the instructions below.
 
 ### Install XCode Command Line Tools
 
