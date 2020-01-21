@@ -162,8 +162,7 @@ default, the Learn directory is set to  ~/Development/code.
 
 Save and close the `~/.learn-config` file.
 
-> **Note:** These settings only trigger when you use the 'Open' button in Learn
-> or when you use the `learn open` command. You can always manually clone your
+> **Note:** These settings only trigger when you use the `learn open` command. You can always manually clone your
 > labs to any location you wish and open them with any text editor without
 > having to edit this config file.
 
