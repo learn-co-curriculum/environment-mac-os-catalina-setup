@@ -345,7 +345,7 @@ account.
 ### Get a Text Editor
 
 Modern text editors come with features that can be very helpful when starting
-out as a programmer. We suggest [Visual Studio Code][VSCode]; follow the link to
+out as a programmer. We suggest [Visual Studio Code][VS Code]; follow the link to
 download the macOS version.
 
 After downloading and unzipping, make sure to move the Visual Studio Code app
@@ -380,7 +380,7 @@ all your labs. By default, the learn_directory is set to `~/Development/code`.
 Save and close the  ~/.learn-config file.
 
 > **Note:** These settings only trigger when you use the 'Open' button in Learn
-> or when you use the learn open command. You can always manually clone your
+> or when you use the `learn open` command. You can always manually clone your
 > labs to any location you wish and open them with any text editor without
 > having to edit this config file.
 
@@ -431,7 +431,7 @@ source ~/.zprofile
 ```
 
 This sets NVM up to be accessible in your terminal. The last command refreshes
-your shell so you won’t have to quit terminal and open it again.
+your shell so you won’t have to quit the terminal and open it again.
 
 Finally, run the three following commands to install the latest version of Node:
 
@@ -470,8 +470,8 @@ mv ~/.zprofile{,.bak}
 mv ~/.gitconfig{,.bak}
 ```
 
-> **Note:** If when you’re trying to back up a file, you get the error No such
-> file or directory , don’t worry. This just means you didn’t have that file to
+> **Note:** If when you’re trying to back up a file, you get the error `No such
+> file or directory` , don’t worry. This just means you didn’t have that file to
 > start with, so there is nothing to back up.
 
 #### IRB
@@ -529,7 +529,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-Replacing `"you@example.com"` with the email tied to your GitHub account and
+Replace `"you@example.com"` with the email tied to your GitHub account and
 `"Your Name"` with your GitHub username. Git will use this email and name as the
 author for all the changes you make.
 
