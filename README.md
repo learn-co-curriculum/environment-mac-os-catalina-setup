@@ -389,8 +389,8 @@ Save and close the  ~/.learn-config file.
 You’ll be using a couple of different databases as you move through the web
 development track. The default database that Rails uses is SQLite. We also
 frequently see that students want to deploy their apps to the free hosting
-service Heroku. To do this though, you’ll need to be using Postgres instead.
-It’s best if we just install both of them now so you can use either one.
+service Heroku. To do this though, you’ll need to be using Postgres instead 
+(instructions for installing Postgres can be found in our [optional installations lesson](https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup).
 
 To set up SQLite, run
 
