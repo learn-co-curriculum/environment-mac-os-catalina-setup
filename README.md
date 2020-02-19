@@ -126,11 +126,13 @@ Now we need to set up the Learn gem. Type the following into your terminal:
 learn whoami
 ```
 
-This will prompt you to set up the Learn gem.
+This will prompt you to set up the Learn gem  using a token provided on `learn.co`. 
+The gem should ask you to go to `learn.co/your-github-username`. Paste this URL 
+in a new browser tab and replace `your-github-username` with your personal GitHub 
+username. At the bottom of the page is the token you'll need.
 
-> **Note:** When the gem asks you to go to `learn.co/your-github-username`, you
-> must fill your username into the URL and be logged in to be able to retrieve
-> your token.
+**Note:** At the end of this lesson is additional troubleshooting information. If you 
+receive an error when running `learn whoami`, please try the steps listed there.
 
 ### Step 5 - Get a Text Editor
 
@@ -143,8 +145,9 @@ to Downloads (or wherever you save downloads). If you see Visual Studio Code
 there, make sure to drag it over to Applications.
 
 Once Visual Studio Code is in your Applications folder, launch the program and
-type `⇧⌘P`, and your **Command Palette** will open. In your **Command Palette**,
-type `>shell command`. Select "Shell Command: Install 'code' command in PATH"
+type `command(⌘) + shift(⇧) + p`, and your **Command Palette** will open. In 
+your **Command Palette**, type `>shell command`. Select "Shell Command: Install
+'code' command in PATH"
 
 ![VS Code Add to Path](https://curriculum-content.s3.amazonaws.com/onboarding/vscode%20path.png)
 
@@ -165,6 +168,44 @@ Save and close the `~/.learn-config` file.
 > **Note:** These settings only trigger when you use the `learn open` command. You can always manually clone your
 > labs to any location you wish and open them with any text editor without
 > having to edit this config file.
+
+If you would like to use the terminal built-in to VS Code, you may need to update
+the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
+search for `settings.json`. 
+
+![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
+
+In this file, you should see opening and closing curly braces `{}` without anything
+inside them. Add the following in between the braces:
+
+```js
+"terminal.integrated.env.osx": {
+    "PATH": ""
+}
+```
+
+If there are already items inside the curly braces, instead of erasing them, you can add a comma
+after the last item and paste in the above setting on a new line. The file should look like this:
+
+```js
+{
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
+
+Or somethings similar to this:
+
+```js
+{
+  "some.other.settings.present": true,
+  "do.not.forget.the.end.comma": true,
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
 
 ### Step 6 - Install Support Programs
 
@@ -304,7 +345,7 @@ one project you're working on works with Ruby version 2.3.3 and another needs
 projects. You can install RVM and set it up with the following commands:
 
 * Run `curl -sSL https://get.rvm.io | bash`(make sure you do not use sudo)
-* Run `source ~/.zprofile` (This reloads your terminal configuration file - similar to closing your terminal and opening it again)*
+* Run `source ~/.zprofile` (This reloads your terminal configuration file - similar to closing your terminal and opening it again)
 * Run `rvm install 2.6.1`
 * Run `rvm use 2.6.1 --default`
 * Check that everything worked by running `ruby -v`. This should output the version of ruby you’re using (2.6.1)
@@ -383,6 +424,44 @@ Save and close the  ~/.learn-config file.
 > or when you use the `learn open` command. You can always manually clone your
 > labs to any location you wish and open them with any text editor without
 > having to edit this config file.
+
+If you would like to use the terminal built-in to VS Code, you may need to update
+the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
+search for `settings.json`. 
+
+![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
+
+In this file, you should see opening and closing curly braces `{}` without anything
+inside them. Add the following in between the braces:
+
+```js
+"terminal.integrated.env.osx": {
+    "PATH": ""
+}
+```
+
+If there are already items inside the curly braces, instead of erasing them, you can add a comma
+after the last item and paste in the above setting on a new line. The file should look like this:
+
+```js
+{
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
+
+Or somethings similar to this:
+
+```js
+{
+  "some.other.settings.present": true,
+  "do.not.forget.the.end.comma": true,
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
 
 ### Install SQLite
 
@@ -576,6 +655,43 @@ curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-
 
 This script will verify that everything you need is installed. If all checks pass,
 you have completed the setup process and are ready to move on!
+
+## Troubleshooting
+
+Below are some options to try for specific issues students have encountered.
+
+### `learn whoami` Command Not Found
+
+Try reinstalling and reconfiguring RVM with the following steps:
+
+Head over to [rvm.io](https://rvm.io/). Use the first command listed there to install
+the correct GPG keys. Then run the following commands:
+
+```sh
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.zprofile
+rvm install 2.6.1
+rvm use 2.6.1 --default
+rvm get stable --auto-dotfiles
+```
+
+Close out of your terminal and reopen, then run
+
+```sh
+gem install learn-co
+```
+
+If you are still unable to run `learn whoami`, try the following:
+
+```sh
+bundle clean --force
+gem install learn-co
+gem install bundler
+```
+
+This will clear out any gems that have already been installed. At the
+moment, you will only need the `learn-co` and `bundler` gems, so this
+reinstalls them.
 
 ## Resources
 
