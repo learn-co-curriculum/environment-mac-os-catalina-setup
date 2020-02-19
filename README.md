@@ -474,6 +474,10 @@ mv ~/.gitconfig{,.bak}
 > file or directory` , don’t worry. This just means you didn’t have that file to
 > start with, so there is nothing to back up.
 
+After changing up the dot files, it is recommended you run 
+`rvm get stable --auto-dotfiles`. This will attempt to clear any potential 
+[PATH](https://en.wikipedia.org/wiki/PATH_(variable)) related issues.
+
 #### IRB
 
 To add some additional formating to IRB, run:
