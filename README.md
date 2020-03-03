@@ -477,6 +477,14 @@ To set up SQLite, run
 brew install sqlite
 ```
 
+### Install Postgres 
+
+To set up Postgres, run
+
+```sh
+brew install postgres
+```
+
 ### Install Rails
 
 Finally, Rails! The powerful Ruby web framework. We can install it with
