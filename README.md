@@ -220,6 +220,34 @@ before your start date, you will receive an invitation to join the Flatiron
 School workspace, `flatiron-school.slack.com`. You’ll also receive a welcome
 email with information about channels you should join.
 
+### Step 7 - Make your terminal easier to read 
+
+Run `open ~/.zprofile` in your terminal. This will open up the `~/.zprofile` file. Copy and paste the following code to the end of the file:
+
+```sh 
+function prompt {
+    ## Define the prompt character
+    local   CHAR="♥"
+  
+    ## ♥ ☆ ♬ ○ ♩ ● ♪ - Keeping some cool ASCII Characters for reference
+
+   autoload -U colors && colors
+
+    ## Here is where we actually export the PS1 Variable which stores the text for your prompt
+    PS1="%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~) %{$reset_color%}%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}%{$CHAR%} > %{$reset_color%}% "
+    PS2='> '
+    PS4='+ '
+
+    ## Additional Option: Minimal // ♥ > Prompt
+    # PS1="%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}%{$CHAR%} > %{$reset_color%}%  "
+    #   PS2='> '
+    #   PS4='+ '
+  }
+
+prompt
+```
+Save the file, and then run `source ~/.zprofile` in your terminal.
+
 ### Step 8 - Verify Installations
 
 To verify that you've got everything installed, run the following command in
