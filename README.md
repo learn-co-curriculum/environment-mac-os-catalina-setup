@@ -7,7 +7,7 @@ This Readme is a step-by-step guide for how to set up your local environment
 users. If you're on a Windows 10 machine, see the [Windows Subsystem for Linux setup instructions](https://github.com/learn-co-curriculum/wsl-setup). If you're on an older windows machine, refer to the [Setting up Linux Virtual Box](https://help.learn.co/en/articles/1489324-setting-up-linux-virtual-box) instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
-but can upgrade, we recommend doing so before continuing. You can check your 
+but can upgrade, we recommend doing so before continuing. You can check your
 OS version by clicking the apple menu in the top left and clicking 'About This Mac'.
 
 If you are unable to upgrade to Catalina, additional instructions are included
@@ -68,10 +68,10 @@ installation is complete as well as a few additional steps to take.
 ```
 
 If you do not see this message, an error may have occurred during installation.
-In this case, follow the [step-by-step guide below](#step-by-step-instructions-for-manual-installation) 
+In this case, follow the [step-by-step guide below](#step-by-step-instructions-for-manual-installation)
 to manually install the necessary tools.
 
-> **Note:** If you are using a mac that is not on Catalina, you will need to 
+> **Note:** If you are using a mac that is not on Catalina, you will need to
 > restart terminal to begin using Zsh instead of Bash.
 
 ### Step 2 - Configure Git
@@ -126,12 +126,12 @@ Now we need to set up the Learn gem. Type the following into your terminal:
 learn whoami
 ```
 
-This will prompt you to set up the Learn gem  using a token provided on `learn.co`. 
-The gem should ask you to go to `learn.co/your-github-username`. Paste this URL 
-in a new browser tab and replace `your-github-username` with your personal GitHub 
+This will prompt you to set up the Learn gem  using a token provided on `learn.co`.
+The gem should ask you to go to `learn.co/your-github-username`. Paste this URL
+in a new browser tab and replace `your-github-username` with your personal GitHub
 username. At the bottom of the page is the token you'll need.
 
-**Note:** At the end of this lesson is additional troubleshooting information. If you 
+**Note:** At the end of this lesson is additional troubleshooting information. If you
 receive an error when running `learn whoami`, please try the steps listed there.
 
 ### Step 5 - Get a Text Editor
@@ -145,7 +145,7 @@ to Downloads (or wherever you save downloads). If you see Visual Studio Code
 there, make sure to drag it over to Applications.
 
 Once Visual Studio Code is in your Applications folder, launch the program and
-type `command(⌘) + shift(⇧) + p`, and your **Command Palette** will open. In 
+type `command(⌘) + shift(⇧) + p`, and your **Command Palette** will open. In
 your **Command Palette**, type `>shell command`. Select "Shell Command: Install
 'code' command in PATH"
 
@@ -169,44 +169,6 @@ Save and close the `~/.learn-config` file.
 > labs to any location you wish and open them with any text editor without
 > having to edit this config file.
 
-If you would like to use the terminal built-in to VS Code, you may need to update
-the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
-search for `settings.json`. 
-
-![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
-
-In this file, you should see opening and closing curly braces `{}` without anything
-inside them. Add the following in between the braces:
-
-```js
-"terminal.integrated.env.osx": {
-    "PATH": ""
-}
-```
-
-If there are already items inside the curly braces, instead of erasing them, you can add a comma
-after the last item and paste in the above setting on a new line. The file should look like this:
-
-```js
-{
-  "terminal.integrated.env.osx": {
-    "PATH": ""
-  }
-}
-```
-
-Or somethings similar to this:
-
-```js
-{
-  "some.other.settings.present": true,
-  "do.not.forget.the.end.comma": true,
-  "terminal.integrated.env.osx": {
-    "PATH": ""
-  }
-}
-```
-
 ### Step 6 - Install Support Programs
 
 #### Install Chrome
@@ -220,11 +182,11 @@ before your start date, you will receive an invitation to join the Flatiron
 School workspace, `flatiron-school.slack.com`. You’ll also receive a welcome
 email with information about channels you should join.
 
-### Step 7 - Make your terminal easier to read 
+### Step 7 - Make your terminal easier to read
 
 Run `open ~/.zprofile` in your terminal. This will open up the `~/.zprofile` file. Copy and paste the following code to the end of the file:
 
-```sh 
+```sh
 function prompt {
     ## Define the prompt character
     local   CHAR="♥" ## ♥ ☆ ♬ ○ ♩ ● ♪ - Keeping some cool ASCII Characters for reference
@@ -426,7 +388,7 @@ Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 `.learn-config` file should open in VSCode!
 
 With the `.learn-config` file open, we can make a small change. Change default
-editor from `subl` (or whatever it may be) to `code`. 
+editor from `subl` (or whatever it may be) to `code`.
 
 > **Note:** [Atom][atom] is also a popular editor option. If you would prefer to
 > use Atom over VS Code, you can. Just make sure that the `~/.learn-config` file
@@ -446,7 +408,7 @@ Save and close the  ~/.learn-config file.
 
 If you would like to use the terminal built-in to VS Code, you may need to update
 the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
-search for `settings.json`. 
+search for `settings.json`.
 
 ![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
 
@@ -487,7 +449,7 @@ Or somethings similar to this:
 You’ll be using a couple of different databases as you move through the web
 development track. The default database that Rails uses is SQLite. We also
 frequently see that students want to deploy their apps to the free hosting
-service Heroku. To do this though, you’ll need to be using Postgres instead 
+service Heroku. To do this though, you’ll need to be using Postgres instead
 (instructions for installing Postgres can be found in our [optional installations lesson](https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup).
 
 To set up SQLite, run
@@ -496,7 +458,7 @@ To set up SQLite, run
 brew install sqlite
 ```
 
-### Install Postgres 
+### Install Postgres
 
 To set up Postgres, run
 
@@ -549,7 +511,7 @@ nvm alias default node
 
 ### Install Chrome
 
-Install Google Chrome and make Chrome your default browser. 
+Install Google Chrome and make Chrome your default browser.
 
 ### Dotfiles
 
@@ -572,7 +534,7 @@ dotfiles before overwriting them. Run the following commands to do so:
 ```sh
 mv ~/.irbrc{,.bak}
 mv ~/.gitignore{,.bak}
-mv ~/.zprofile{,.bak} 
+mv ~/.zprofile{,.bak}
 mv ~/.gitconfig{,.bak}
 ```
 
@@ -580,8 +542,8 @@ mv ~/.gitconfig{,.bak}
 > file or directory` , don’t worry. This just means you didn’t have that file to
 > start with, so there is nothing to back up.
 
-After changing up the dot files, it is recommended you run 
-`rvm get stable --auto-dotfiles`. This will attempt to clear any potential 
+After changing up the dot files, it is recommended you run
+`rvm get stable --auto-dotfiles`. This will attempt to clear any potential
 [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) related issues.
 
 #### IRB
@@ -600,7 +562,7 @@ many Git repositories contain a `.gitignore` file, defining what files should be
 ignored when code is being pushed to GitHub. We can also set a global `.gitignore`
 file to use for all repositories.
 
-GitHub maintains [a list of files they recommend][octocat gitignore]. These filenames and 
+GitHub maintains [a list of files they recommend][octocat gitignore]. These filenames and
 a few others can be added to your own global `.gitignore` file by running:
 
 ```sh
