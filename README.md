@@ -182,26 +182,7 @@ before your start date, you will receive an invitation to join the Flatiron
 School workspace, `flatiron-school.slack.com`. You’ll also receive a welcome
 email with information about channels you should join.
 
-### Step 7 - Make your terminal easier to read
-
-Run `open ~/.zprofile` in your terminal. This will open up the `~/.zprofile` file. Copy and paste the following code to the end of the file:
-
-```sh
-function prompt {
-    ## Define the prompt character
-    local   CHAR="♥" ## ♥ ☆ ♬ ○ ♩ ● ♪ - Keeping some cool ASCII Characters for reference
-    autoload -U colors && colors
-    ## Here is where we actually export the PS1 Variable which stores the text for your prompt
-    PS1="%{$fg[green]%}%(4~|%-1~/.../%2~|%~) %{$reset_color%}%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}%{$CHAR%} > %{$reset_color%}% "
-    PS2='> '
-    PS4='+ '
-}
-
-prompt
-```
-Save the file, and then run `source ~/.zprofile` in your terminal.
-
-### Step 8 - Verify Installations
+### Step 7 - Verify Installations
 
 To verify that you've got everything installed, run the following command in
 your terminal:
@@ -447,10 +428,7 @@ Or somethings similar to this:
 ### Install SQLite
 
 You’ll be using a couple of different databases as you move through the web
-development track. The default database that Rails uses is SQLite. We also
-frequently see that students want to deploy their apps to the free hosting
-service Heroku. To do this though, you’ll need to be using Postgres instead
-(instructions for installing Postgres can be found in our [optional installations lesson](https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup).
+development track. The default database that Rails uses is SQLite.
 
 To set up SQLite, run
 
@@ -460,10 +438,18 @@ brew install sqlite
 
 ### Install Postgres
 
-To set up Postgres, run
+We also frequently see that students want to deploy their apps to the free
+hosting service [Heroku][]. To do this, though, you will need a different
+relational database management system, PostgreSQL.
+
+[Heroku]: https://www.heroku.com/
+
+To install Postgres, run the following commands:
 
 ```sh
 brew install postgres
+brew services start postgresql
+gem install pg
 ```
 
 ### Install Rails
@@ -511,7 +497,10 @@ nvm alias default node
 
 ### Install Chrome
 
-Install Google Chrome and make Chrome your default browser.
+Install [Google Chrome][] and [make Chrome your default browser][default browser].
+
+[Google Chrome]: https://www.google.com/chrome/
+[default browser]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
 
 ### Dotfiles
 
@@ -535,6 +524,7 @@ dotfiles before overwriting them. Run the following commands to do so:
 mv ~/.irbrc{,.bak}
 mv ~/.gitignore{,.bak}
 mv ~/.zprofile{,.bak}
+mv ~/.zshrc{,.bak}
 mv ~/.gitconfig{,.bak}
 ```
 
@@ -546,7 +536,7 @@ After changing up the dot files, it is recommended you run
 `rvm get stable --auto-dotfiles`. This will attempt to clear any potential
 [PATH](https://en.wikipedia.org/wiki/PATH_(variable)) related issues.
 
-#### IRB
+#### IRB - `~/.irbrc`
 
 To add some additional formating to IRB, run:
 
@@ -554,7 +544,7 @@ To add some additional formating to IRB, run:
 curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/irbrc" -o "$HOME/.irbrc"
 ```
 
-#### Global List of Files for Git to Ignore
+#### Global List of Files for Git to Ignore - `~/.gitignore`
 
 When code is sent from your local machine to GitHub, it is possible to
 accidentally send files that aren't normally meant to be sent. To avoid this,
@@ -569,7 +559,26 @@ a few others can be added to your own global `.gitignore` file by running:
 curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/ubuntu-gitignore" -o "$HOME/.gitignore"
 ```
 
-#### Helpful Zsh Profile Shortcuts
+#### Setting up NVM and RVM and a Custom Prompt - `.zshrc`
+
+The `~/.zshrc` file contains settings for terminal interaction. It runs every
+time you open a new terminal window. NVM and RVM use this file to ensure they
+are loaded and accessible when a terminal opens.
+
+We can also use  `~/.zshrc` to customize what the prompt looks like. Running the
+following will change your prompt and ensure NVM and RVM are set up to load correctly.
+
+```sh
+curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/.zshrc" -o "$HOME/.zshrc"
+source ~/.zshrc
+```
+
+Additional information on customizing your prompt can be found in the 
+[optional installation instructions][optional].
+
+[optional]: https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup
+
+#### Helpful Zsh Profile Shortcuts - `.zprofile`
 
 Your Zsh profile loads up every time you open a terminal window. Learn has a default
 `.zprofile` that is designed to load up a bunch of shortcuts for you as well as make
@@ -647,28 +656,64 @@ you have completed the setup process and are ready to move on!
 
 ## Troubleshooting
 
-Below are some options to try for specific issues students have encountered.
+Below are some options to try for specific issues.
 
-### `learn whoami` Command Not Found
+### `learn whoami` Command Not Found / `learn` Produces `oj.bundle` Error
 
-Try reinstalling and reconfiguring RVM with the following steps:
+1.  Close out your terminal window, reopen it and try the `learn whoami` command
+    again.
 
-Head over to [rvm.io](https://rvm.io/). Use the first command listed there to install
-the correct GPG keys. Then run the following commands:
+2.  Run the command `rvm list`. If you see a warning regarding `PATH`, try
+    running the following first:
 
-```sh
-curl -sSL https://get.rvm.io | bash -s stable
-source ~/.zprofile
-rvm install 2.6.1
-rvm use 2.6.1 --default
-rvm get stable --auto-dotfiles
-```
+    ```sh
+    rvm use 2.6.1
+    rvm --default use 2.6.1
+    ```
 
-Close out of your terminal and reopen, then run
+    Then reinstall the Learn gem and test it again with:
 
-```sh
-gem install learn-co
-```
+    ```sh
+    gem install learn-co
+    learn whoami
+    ```
+
+2.  If the `learn` command continues to fail, but RVM is working fine, try
+    reinstalling RVM by first using the following command:
+
+    ```sh
+    rvm implode
+    ```
+
+    Then rerunning the automatic install script:
+
+    ```sh
+    curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
+    ```
+
+    Alternatively, you can try to just reinstall RVM with the following command:
+
+    ```sh
+    curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+    ```
+
+    Once RVM is installed, try reinstalling and testing the `learn-co` gem.
+
+3.  If RVM is not found when you run `rvm list`, try installing RVM with the
+    command shown above. You may get an error with further commands to try,
+    including the following:
+
+    ```sh
+    gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+    or if it fails:
+
+    command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+    command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+    ```
+
+    After running the commands above, try reinstalling RVM again, then the
+    `learn-co` gem.
 
 If you are still unable to run `learn whoami`, try the following:
 
