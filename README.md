@@ -25,7 +25,7 @@ Prework, before you start on campus.
 
 For convenience, we've written a script that will handle many installation steps
 for us. Follow the steps below to run this script. After the script runs, some
-additional configuration will be needed as described in steps 2 through 6. The
+additional configuration will be needed as described in steps 2 through 7. The
 final step is to run a validation script that will check to see if your environment
 is good to go.
 
@@ -220,7 +220,101 @@ before your start date, you will receive an invitation to join the Flatiron
 School workspace, `flatiron-school.slack.com`. You’ll also receive a welcome
 email with information about channels you should join.
 
-### Step 7 - Verify Installations
+### Step 7 - Make your terminal easier to read
+
+### Customizing Your Terminal Prompt
+
+`open ~/.zprofile` in the terminal. Near the beginning of the file, you
+should see the following exact code:
+
+```sh
+  # # This function builds your prompt. It is called below
+  # function prompt {
+  #   # Define the prompt character
+  #   local   CHAR="♥"
+  
+  #   # Define some local colors
+  #   local   RED="\[\e[0;31m\]"
+  #   local   BLUE="\[\e[0;34m\]"
+  #   local   GREEN="\[\e[0;32m\]"
+  #   local   GRAY_TEXT_BLUE_BACKGROUND="\[\e[37;44;1m\]"
+  
+  #   # Define a variable to reset the text color
+  #   local   RESET="\[\e[0m\]"
+  
+  #   # ♥ ☆ - Keeping some cool ASCII Characters for reference
+
+  #   autoload -U colors && colors
+
+  #   # Here is where we actually export the PS1 Variable which stores the text for your prompt
+  #   PS1="%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~) %{$reset_color%}%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}♥ > %{$reset_color%}% "
+  #   PS2='> '
+  #   PS4='+ '
+
+  #   # Additional Option: Minimal // ♥ > Prompt
+  #   # PS1="%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}♥ > %{$reset_color%}%  "
+  #   #   PS2='> '
+  #   #   PS4='+ '
+
+  # }
+
+  # # Finally call the function and our prompt is all pretty
+  # prompt
+  ```
+
+  Remove **just the first #** from each line to uncomment this section.
+
+  The result should look like this:
+
+  ```sh
+  # This function builds your prompt. It is called below
+  function prompt {
+    # Define the prompt character
+    local   CHAR="♥"
+  
+    # Define some local colors
+    local   RED="\[\e[0;31m\]"
+    local   BLUE="\[\e[0;34m\]"
+    local   GREEN="\[\e[0;32m\]"
+    local   GRAY_TEXT_BLUE_BACKGROUND="\[\e[37;44;1m\]"
+  
+    # Define a variable to reset the text color
+    local   RESET="\[\e[0m\]"
+  
+    # ♥ ☆ - Keeping some cool ASCII Characters for reference
+
+    autoload -U colors && colors
+
+    # Here is where we actually export the PS1 Variable which stores the text for your prompt
+    PS1="%{$fg[cyan]%}%(4~|%-1~/.../%2~|%~) %{$reset_color%}%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}♥ > %{$reset_color%}% "
+    PS2='> '
+    PS4='+ '
+
+    # Additional Option: Minimal // ♥ > Prompt
+    # PS1="%{$fg[blue]%}// %{$reset_color%}% %{$fg[red]%}♥ > %{$reset_color%}%  "
+    #   PS2='> '
+    #   PS4='+ '
+
+  }
+
+  # Finally call the function and our prompt is all pretty
+  prompt
+  ```
+
+  Save `~/.zprofile` and in your terminal, run the following command:
+
+  ```sh
+  source ~/.zprofile
+  ```
+
+  You should see your prompt change to display the current dirrectory, followed by `// ♥ >`.
+
+  > **Note:** An alternative, minimal prompt (just `// ♥ >`)is also provided. If you
+  > would like to use this second prompt, comment out the lines that start with
+  > `PS1`, `PS2`, and `PS4`. Just below these are the alternative assignments.
+  > Uncomment these and rerun `source ~/.zprofile` to see the change.
+
+### Step 8 - Verify Installations
 
 To verify that you've got everything installed, run the following command in
 your terminal:
