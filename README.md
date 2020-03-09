@@ -47,7 +47,7 @@ installation steps! On Mac, you can open up your terminal by going to
 Applications > Utilities > Terminal, or by using the quick launch (cmd + space)
 and just start typing “Terminal”.
 
-In your terminal, run the following:
+In your terminal, copy, paste, and run the following:
 
 ```sh
 curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
@@ -184,7 +184,7 @@ email with information about channels you should join.
 
 ### Step 7 - Verify Installations
 
-To verify that you've got everything installed, run the following command in
+To verify that you've got everything installed, copy, paste, and run the following command in
 your terminal:
 
 ```sh
