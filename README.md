@@ -40,6 +40,8 @@ First, if you've downloaded the Learn IDE, you will need to uninstall it. For
 detailed instructions on how to properly uninstall the IDE, please read this
 [Help Center article][uninstall IDE].
 
+Second, create a Flatiron directory in your terminal. Open up your Terminal and type `mkdir -p Flatiron/code`.
+
 ### Step 1 - Run Automatic Installation Script
 
 Open up your Terminal. The terminal is where we are going to be doing most of our
@@ -161,7 +163,7 @@ Change default editor from `subl` (or `atom`) to `code`. If you have a different
 editor you prefer, you can set it as the default Learn editor in this file.
 
 You can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to  ~/Development/code.
+default, the Learn directory is set to  ~/Development/code. Change this line to read ~/Flatiron/code
 
 Save and close the `~/.learn-config` file.
 
@@ -220,6 +222,8 @@ the instructions below.
 to continue reading and can move on to the next lesson**
 
 ## Step By Step Instructions for Manual Installation
+
+First, create a Flatiron directory in your terminal. Open up your Terminal and type `mkdir -p Flatiron/code`.
 
 ### Install XCode Command Line Tools
 
@@ -379,7 +383,7 @@ editor from `subl` (or whatever it may be) to `code`.
 > in this file.
 
 In `.learn-config`, you can also set the default location where Learn will save
-all your labs. By default, the learn_directory is set to `~/Development/code`.
+all your labs. By default, the learn_directory is set to `~/Development/code`. Change this line to `~/Flatiron/code`
 Save and close the  ~/.learn-config file.
 
 > **Note:** These settings only trigger when you use the 'Open' button in Learn
