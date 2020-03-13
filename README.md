@@ -163,7 +163,7 @@ editor you prefer, you can set it as the default Learn editor in this file.
 In `.learn-config`, you can also set the default location where Learn will save all your labs. By
 default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
 If you want to store labs somewhere else, change this path to point to a different location. Make
-sure the folders you point to exists!
+sure the folders you point to exist!
 
 So for instance, if we wanted to set our default lab location to 
 `/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
@@ -177,12 +177,9 @@ mkdir Flatiron/code
 ```
 
 This location setting is only triggered when using the `learn open` command to 
-open a lesson. You can always manually clone your labs to any location you wish
-and open them with any text editor without having to edit this config file. 
-
-> **Note:** If you are using an older Mac, we recommend going ahead and changing 
-> the default lab location. Some students have encountered Ruby Gem issues when
-> working in the default `Development/code` folder.
+open a lesson. Some students have encountered Ruby Gem issues when
+working in the default `Development/code` folder, so changing this now may be
+helpful in preventing issues later on.
 
 Save and close the `~/.learn-config` file.
 
@@ -436,7 +433,7 @@ editor from `subl` (or whatever it may be) to `code`.
 In `.learn-config`, you can also set the default location where Learn will save all your labs. By
 default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
 If you want to store labs somewhere else, change this path to point to a different location. Make
-sure the folders you point to exists!
+sure the folders you point to exist!
 
 So for instance, if we wanted to set our default lab location to 
 `/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
@@ -450,12 +447,9 @@ mkdir Flatiron/code
 ```
 
 This location setting is only triggered when using the `learn open` command to 
-open a lesson. You can always manually clone your labs to any location you wish
-and open them with any text editor without having to edit this config file. 
-
-> **Note:** If you are using an older Mac, we recommend going ahead and changing 
-> the default lab location. Some students have encountered Ruby Gem issues when
-> working in the default `Development/code` folder.
+open a lesson. Some students have encountered Ruby Gem issues when
+working in the default `Development/code` folder, so changing this now may be
+helpful in preventing issues later on.
 
 Save and close the `~/.learn-config` file.
 
