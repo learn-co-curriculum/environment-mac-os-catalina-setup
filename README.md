@@ -161,7 +161,10 @@ Change default editor from `subl` (or `atom`) to `code`. If you have a different
 editor you prefer, you can set it as the default Learn editor in this file.
 
 You can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`. 
+default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`, 
+but if you want to store labs in a place that is more convenient, you could change the 
+directoy to something like `/Users/<your-computer-username/Desktop/code`, so the folder 
+will appear on your Desktop.
 
 This setting is only triggered when using the `learn open` command to 
 open a lesson. You can always manually clone your labs to any location you wish
@@ -422,9 +425,11 @@ editor from `subl` (or whatever it may be) to `code`.
 > different editor you prefer, you can set also it as the default learn editor
 > in this file.
 
-In `.learn-config`, you can also set the default location where Learn will save
-all your labs. By default, the learn_directory is set to 
-`/Users/<your-computer-username>/Development/code`.
+You can also set the default location where Learn will save all your labs. By
+default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`, 
+but if you want to store labs in a place that is more convenient, you could change the 
+directoy to something like `/Users/<your-computer-username/Desktop/code`, so the folder 
+will appear on your Desktop.
 
 Save and close the  `~/.learn-config` file.
 
