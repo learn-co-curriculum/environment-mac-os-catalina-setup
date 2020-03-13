@@ -160,21 +160,29 @@ Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 Change default editor from `subl` (or `atom`) to `code`. If you have a different
 editor you prefer, you can set it as the default Learn editor in this file.
 
-You can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`, 
-but if you want to store labs in a place that is more convenient, you could change the 
-directoy to something like `/Users/<your-computer-username/Desktop/code`, so the folder 
-will appear on your Desktop.
+In `.learn-config`, you can also set the default location where Learn will save all your labs. By
+default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
+If you want to store labs somewhere else, change this path to point to a different location. Make
+sure the folders you point to exists!
 
-This setting is only triggered when using the `learn open` command to 
+So for instance, if we wanted to set our default lab location to 
+`/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
+there the `Flatiron` folder exists as well as the subfolder `code`. We can do 
+this in the terminal by changing our directory and making the folders:
+
+```sh
+cd  ~
+mkdir Flatiron
+mkdir Flatiron/code
+```
+
+This location setting is only triggered when using the `learn open` command to 
 open a lesson. You can always manually clone your labs to any location you wish
 and open them with any text editor without having to edit this config file. 
 
-> **Note:** If you do ever run into difficulties using `learn open` or running labs in 
-> the default Learn directory, we recommend [cloning directly from GitHub][cloning] and using a 
-> different local folder to store labs.
-
-[cloning]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+> **Note:** If you are using an older Mac, we recommend going ahead and changing 
+> the default lab location. Some students have encountered Ruby Gem issues when
+> working in the default `Development/code` folder.
 
 Save and close the `~/.learn-config` file.
 
@@ -425,23 +433,29 @@ editor from `subl` (or whatever it may be) to `code`.
 > different editor you prefer, you can set also it as the default learn editor
 > in this file.
 
-You can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`, 
-but if you want to store labs in a place that is more convenient, you could change the 
-directoy to something like `/Users/<your-computer-username/Desktop/code`, so the folder 
-will appear on your Desktop.
+In `.learn-config`, you can also set the default location where Learn will save all your labs. By
+default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
+If you want to store labs somewhere else, change this path to point to a different location. Make
+sure the folders you point to exists!
 
-Save and close the  `~/.learn-config` file.
+So for instance, if we wanted to set our default lab location to 
+`/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
+there the `Flatiron` folder exists as well as the subfolder `code`. We can do 
+this in the terminal by changing our directory and making the folders:
 
-This setting is only triggered when using the `learn open` command to 
+```sh
+cd  ~
+mkdir Flatiron
+mkdir Flatiron/code
+```
+
+This location setting is only triggered when using the `learn open` command to 
 open a lesson. You can always manually clone your labs to any location you wish
 and open them with any text editor without having to edit this config file. 
 
-> **Note:** If you do ever run into difficulties using `learn open` or running labs in 
-> the default Learn directory, we recommend [cloning directly from GitHub][cloning] and using a 
-> different local folder to store labs.
-
-[cloning]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+> **Note:** If you are using an older Mac, we recommend going ahead and changing 
+> the default lab location. Some students have encountered Ruby Gem issues when
+> working in the default `Development/code` folder.
 
 Save and close the `~/.learn-config` file.
 
