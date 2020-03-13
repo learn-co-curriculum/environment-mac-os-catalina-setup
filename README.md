@@ -161,13 +161,57 @@ Change default editor from `subl` (or `atom`) to `code`. If you have a different
 editor you prefer, you can set it as the default Learn editor in this file.
 
 You can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to  ~/Development/code.
+default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`. 
+
+This setting is only triggered when using the `learn open` command to 
+open a lesson. You can always manually clone your labs to any location you wish
+and open them with any text editor without having to edit this config file. 
+
+> **Note:** If you do ever run into difficulties using `learn open` or running labs in 
+> the default Learn directory, we recommend [cloning directly from GitHub][cloning] and using a 
+> different local folder to store labs.
+
+[cloning]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
 Save and close the `~/.learn-config` file.
 
-> **Note:** These settings only trigger when you use the `learn open` command. You can always manually clone your
-> labs to any location you wish and open them with any text editor without
-> having to edit this config file.
+If you would like to use the terminal built-in to VS Code, you may need to update
+the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
+search for `settings.json`.
+
+![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
+
+In this file, you should see opening and closing curly braces `{}` without anything
+inside them. Add the following in between the braces:
+
+```js
+"terminal.integrated.env.osx": {
+    "PATH": ""
+}
+```
+
+If there are already items inside the curly braces, instead of erasing them, you can add a comma
+after the last item and paste in the above setting on a new line. The file should look like this:
+
+```js
+{
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
+
+Or somethings similar to this:
+
+```js
+{
+  "some.other.settings.present": true,
+  "do.not.forget.the.end.comma": true,
+  "terminal.integrated.env.osx": {
+    "PATH": ""
+  }
+}
+```
 
 ### Step 6 - Install Support Programs
 
@@ -379,13 +423,22 @@ editor from `subl` (or whatever it may be) to `code`.
 > in this file.
 
 In `.learn-config`, you can also set the default location where Learn will save
-all your labs. By default, the learn_directory is set to `~/Development/code`.
-Save and close the  ~/.learn-config file.
+all your labs. By default, the learn_directory is set to 
+`/Users/<your-computer-username>/Development/code`.
 
-> **Note:** These settings only trigger when you use the 'Open' button in Learn
-> or when you use the `learn open` command. You can always manually clone your
-> labs to any location you wish and open them with any text editor without
-> having to edit this config file.
+Save and close the  `~/.learn-config` file.
+
+This setting is only triggered when using the `learn open` command to 
+open a lesson. You can always manually clone your labs to any location you wish
+and open them with any text editor without having to edit this config file. 
+
+> **Note:** If you do ever run into difficulties using `learn open` or running labs in 
+> the default Learn directory, we recommend [cloning directly from GitHub][cloning] and using a 
+> different local folder to store labs.
+
+[cloning]: https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+
+Save and close the `~/.learn-config` file.
 
 If you would like to use the terminal built-in to VS Code, you may need to update
 the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
