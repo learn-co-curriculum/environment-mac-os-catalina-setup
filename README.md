@@ -126,10 +126,10 @@ Now we need to set up the Learn gem. Type the following into your terminal:
 learn whoami
 ```
 
-This will prompt you to set up the Learn gem  using a token provided on `learn.co`.
-The gem should ask you to go to `learn.co/your-github-username`. Paste this URL
-in a new browser tab and replace `your-github-username` with your personal GitHub
-username. At the bottom of the page is the token you'll need.
+This will prompt you to set up the Learn gem using a token provided on `learn.co`.
+
+- If you have connected your Github account to your Learn account, navigate to learn.co/your_github_username. The OAuth token is at the bottom of the page.
+- If you have not connected your Github account: Go to [your profile](https://learn.co/account/profile) > Learn Settings > Public Profile. Click on the link under **Username**. The OAuth token is at the bottom of the page.
 
 **Note:** At the end of this lesson is additional troubleshooting information. If you
 receive an error when running `learn whoami`, please try the steps listed there.
