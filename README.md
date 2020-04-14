@@ -70,6 +70,28 @@ of things we will need. To install Homebrew, run the following:
 You can verify that Homebrew is successfully installed by running `brew help`. If
 your terminal outputs a list of `brew` commands, you're all set.
 
+### Install Zsh
+
+[Zsh][] is the new standard [shell][] for the macOS. To see if you're already
+using Zsh, run the following:
+
+```sh
+echo $SHELL
+```
+
+If the terminal outputs `/bin/zsh`, Zsh is already installed. If something else
+was output (like `/bin/bash`), run the following commands:
+
+```sh
+brew install zsh
+chsh -s /bin/zsh
+```
+
+This will install Zsh and set it as the default shell.
+
+Close your terminal and reopen. If you rerun `echo $SHELL`, the terminal should
+output `/bin/zsh`.
+
 ### Install Git
 
 Git generally comes pre-installed with most operating systems, but you can check
@@ -101,25 +123,6 @@ brew install gnupg
 ```sh
 brew link gnupg
 ```
-
-## Install Zsh (For Older macOS Versions)
-
-If you are on macOS Catalina, Zsh is already installed and you can move on to
-installing the Ruby Version Manager. If you are using an older macOS version and
-are unable to upgrade, you can still install Zsh by running the following:
-
-```sh
-brew install zsh
-```
-
-Once installed, you'll need to set Zsh as your default shell. You can do this
-by running:
-
-```sh
-chsh -s /bin/zsh
-```
-
-Zsh will start the next time you open your terminal.
 
 ### Install Ruby Version Manager
 
