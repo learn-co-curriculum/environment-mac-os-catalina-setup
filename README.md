@@ -109,6 +109,53 @@ brew install gnupg
 > brew link gnupg
 > ```
 
+## Install RVM
+
+[RVM][] is a tool that lets you run different versions of Ruby on your computer.
+If one project you're working on works with Ruby version 2.3.3 and another needs
+2.6.1, you can easily switch between the two versions when you switch between
+projects.
+
+The following command downloads encryption keys we need to install RVM:
+
+```sh
+gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+```
+
+If you get an error that gpg2 is not found, try with this command instead:
+
+```sh
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+```
+
+Once downloaded, use the following command to download RVM and reload the
+`.zshrc` file:
+
+```sh
+curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+```
+
+Once RVM is installed, close and reopen your terminal. Next, we will install the
+Ruby version we'll be using and set it to the default:
+
+```sh
+rvm install 2.6.1
+rvm use 2.6.1 --default
+```
+
+To check that everything worked, run `rvm list`. You should see `=* ruby-2.6.1`
+listed, indicating that `2.6.1` is installed and set as the default version for
+Ruby. You can also run `ruby -v`, which shold show that Ruby `2.6.1` is the
+current version of Ruby being used.
+
+[RVM]: https://rvm.io/
+
+Before continuing, close and reopen your terminal and run `rvm list` one more
+time to make sure everything is working.
+
+> **Note:** If you see an error or warning when running `rvm list`, we recommend
+> following the troubleshooting steps at the end of this lesson before
+> continuing.
 
 ### Install Git
 
@@ -120,21 +167,6 @@ Homebrew:
 ```sh
 brew install git
 ```
-
-### Install Ruby Version Manager
-
-RVM is a tool that lets you run different versions of Ruby on your computer. If
-one project you're working on works with Ruby version 2.3.3 and another needs
-2.6.1, you can easily switch between the two versions when you switch between
-projects. You can install RVM and set it up with the following commands:
-
-* Run `curl -sSL https://get.rvm.io | bash`(make sure you do not use sudo)
-* Run `source ~/.zprofile` (This reloads your terminal configuration file - similar to closing your terminal and opening it again)
-* Run `rvm install 2.6.1`
-* Run `rvm use 2.6.1 --default`
-* Check that everything worked by running `ruby -v`. This should output the version of ruby you’re using (2.6.1)
-
-If you want to see the list of versions that rvm has installed, you can run `rvm list`
 
 ### Install Some Ruby Gems
 
