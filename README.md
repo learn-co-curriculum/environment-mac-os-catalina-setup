@@ -108,7 +108,7 @@ brew install gnupg
 > brew link gnupg
 > ```
 
-## Install RVM
+### Install RVM
 
 [RVM][] is a tool that lets you run different versions of Ruby on your computer.
 If one project you're working on works with Ruby version 2.3.3 and another needs
