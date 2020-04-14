@@ -486,7 +486,7 @@ Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out.
 **Follow the [instructions provided by GitHub][add ssh] and add this key to your
 GitHub account**
 
-#### Install Chrome
+### Install Chrome
 
 Install [Google Chrome][] and [make Chrome your default browser][default chrome].
 
