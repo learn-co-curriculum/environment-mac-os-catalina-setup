@@ -33,20 +33,27 @@ detailed instructions on how to properly uninstall the IDE, please read this
 
 ## Step By Step Instructions for Manual Installation
 
-### Install XCode Command Line Tools
 
-To install the XCode Command Line Tools, in the terminal, type:
+### Install Xcode Command Line Tools
+
+Open up your terminal. You can do this by going to Applications > Utilities >
+Terminal, or by using the quick launch (`cmd` + `space`) and just start typing
+“Terminal”.
+
+The first tools we're going to install are the Xcode command-line tools.
+[Xcode][] is a suite of development tools from Apple, including tools for
+building Mac and iPhone applications. For this course, we only need the Xcode
+command-line tools, as many other tools rely on them. Run the following to
+install the them:
 
 ```sh
 xcode-select --install
 ```
 
-You will be prompted to accept a license agreement. You do not need to install
-the entire Xcode application, just the command line tools.
-
-If you get a message that the command line tools are already installed, that is
-fine. We won't directly use these tools in the program, but they are used by other
-tools we're about to install.
+You will be prompted to install Xcode Command-Line Tools. Agree and allow the
+install to continue. You may need to provide your computer's password. To verify
+the installation, you can run `xcode-select -p`. If you see
+`/Applications/Xcode.app/Contents/Developer`, Xcode is ready to go.
 
 ### Install Homebrew
 
