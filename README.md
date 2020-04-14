@@ -600,6 +600,7 @@ Below are some options to try for specific issues.
 - [Nokogiri macOS Support][nokogiri support]
 - [Visual Studio Code Download][VS Code]
 
+
 [VS Code]: https://code.visualstudio.com/Download
 [nokogiri support]: http://www.nokogiri.org/tutorials/installing_nokogiri.html#mac_os_x
 [uninstall IDE]: http://help.learn.co/the-learn-ide/ide-settings/deleting-the-ide
@@ -609,4 +610,15 @@ Below are some options to try for specific issues.
 [octocat gitignore]: https://gist.github.com/octocat/9257657
 [Google Chrome]: https://www.google.com/chrome/
 [default chrome]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
+[default browser]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
+[your profile]: https://learn.co/account/profile
+[GMP]: https://gmplib.org/
+[GnuPG]: https://gnupg.org/
 [Homebrew]: https://brew.sh/
+[RVM]: https://rvm.io/
+[wsl]: https://github.com/learn-co-curriculum/wsl-setup
+[linux]: https://help.learn.co/en/articles/1489324-setting-up-linux-virtual-box
+[optional]: https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup
+[Xcode]: https://developer.apple.com/xcode/
+[Rails]: https://rubyonrails.org/
+[PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
