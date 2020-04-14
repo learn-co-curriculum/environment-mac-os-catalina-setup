@@ -446,7 +446,7 @@ curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/gitconfi
 
 ### Configure Git
 
-With Git installed, we now want to configure it using your personal account.
+With Git installed, we now want to configure it using your own account.
 First, you need to let Git know who you are. You can do this by running:
 
 ```sh
@@ -470,10 +470,11 @@ and password whenever you use the terminal to interact with GitHub.
   new SSH key. You should be prompted to select a location and passphrase for
   your new key. Leave everything blank and press enter for the default
   location and no passphrase. If you’re asked if you want to overwrite, then
-  you already have an SSH key and you do not want to overwrite it.
+  you already have an SSH key, and you do not want to overwrite it.
 
-Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out. Follow
-the [instructions provided by GitHub][add ssh] and add this key to your GitHub account
+Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out.
+Follow the [instructions provided by GitHub][add ssh] and add this key to your
+GitHub account
 
 #### Install Chrome
 
@@ -502,50 +503,28 @@ you have completed the setup process and are ready to move on!
 
 Below are some options to try for specific issues.
 
-### `learn whoami` Command Not Found / `learn` Produces `oj.bundle` Error
+### RVM Is Producing Errors or Warnings
 
-1.  Close out your terminal window, reopen it and try the `learn whoami` command
-    again.
+1. Close your terminal, reopen it, and try the `rvm list` command.
 
-2.  Run the command `rvm list`. If you see a warning regarding `PATH`, try
-    running the following first:
+2. If you see a warning regarding the `PATH`, try running the following
+   first:
 
-    ```sh
-    rvm use 2.6.1
-    rvm --default use 2.6.1
-    ```
+   ```sh
+   rvm use 2.6.1
+   rvm --default use 2.6.1
+   ```
 
-    Then reinstall the Learn gem and test it again with:
+   Close and reopen the terminal again, and rerun `rvm list`.
 
-    ```sh
-    gem install learn-co
-    learn whoami
-    ```
-
-2.  If the `learn` command continues to fail, but RVM is working fine, try
-    reinstalling RVM by first using the following command:
-
-    ```sh
-    rvm implode
-    ```
-
-    Then rerunning the automatic install script:
-
-    ```sh
-    curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
-    ```
-
-    Alternatively, you can try to just reinstall RVM with the following command:
+3. If RVM is not found when you run `rvm list`, try reinstalling RVM:
 
     ```sh
     curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
     ```
 
-    Once RVM is installed, try reinstalling and testing the `learn-co` gem.
-
-3.  If RVM is not found when you run `rvm list`, try installing RVM with the
-    command shown above. You may get an error with further commands to try,
-    including the following:
+    You may get an error regarding keys with further
+    commands to try, including the following:
 
     ```sh
     gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -556,20 +535,63 @@ Below are some options to try for specific issues.
     command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
     ```
 
-    After running the commands above, try reinstalling RVM again, then the
-    `learn-co` gem.
+   Try each of these, followed by the previous `curl` command to install RVM.
 
-If you are still unable to run `learn whoami`, try the following:
+4. If RVM is found but continues to produce errors, try uninstalling with:
 
-```sh
-bundle clean --force
-gem install learn-co
-gem install bundler
-```
+   ```sh
+   rvm implode
+   ```
 
-This will clear out any gems that have already been installed. At the
-moment, you will only need the `learn-co` and `bundler` gems, so this
-reinstalls them.
+   This will remove RVM entirely. Follow the instructions in Step 3 to reinstall RVM.
+
+### `learn whoami` Command Not Found / `learn` Produces `oj.bundle` Error
+
+1. Close your terminal window, reopen it, and try the `learn whoami` command
+   again.
+
+2. Run the command `rvm list`. If RVM is not found, follow the steps in the
+   previous troubleshooting section on installing RVM. If you see a warning
+   regarding `PATH`, try running the following first:
+
+   ```sh
+   rvm use 2.6.1
+   rvm --default use 2.6.1
+   ```
+
+   Then reinstall the Learn gem and test it again with:
+
+   ```sh
+   gem install learn-co
+   learn whoami
+   ```
+
+3. If the `learn` command continues to fail, but RVM is working fine, try
+   reinstalling RVM by first using the following command:
+
+   ```sh
+   rvm implode
+   ```
+
+   Then rerunning the RVM install script:
+
+   ```sh
+   curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+   ```
+
+   Once RVM is installed, try reinstalling and testing the `learn-co` gem.
+
+4. If you are still unable to run `learn whoami`, try the following:
+
+   ```sh
+   bundle clean --force
+   gem install learn-co
+   gem install bundler
+   ```
+
+   This will clear out any gems that have already been installed. At the moment,
+   you will only need the `learn-co` and `bundler` gems, so this reinstalls
+   them.
 
 ## Resources
 
