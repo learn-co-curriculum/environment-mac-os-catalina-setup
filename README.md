@@ -174,6 +174,17 @@ get a few important ones.
 * Install Ruby on Rails with `gem install rails` - [Rails][] is used for
   building out full web applications. We will learn much more about Rails soon.
 
+Before continuing, check to make sure the `learn-co` gem was properly installed. Run
+`learn` in the terminal. If you're in your home directory (`cd ~`), running learn should
+produce the following message:
+
+```sh
+You don't appear to be in a Learn lesson's directory. Please cd to an appropriate directory and try again.
+```
+
+If you receive an error message, try reinstalling with `gem install learn-co` again, close
+and reopen the terminal and try the `learn` command a second time.
+
 ### Install Git
 
 Git generally comes pre-installed with most operating systems, but you can check
