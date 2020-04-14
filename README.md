@@ -603,7 +603,7 @@ Below are some options to try for specific issues.
 [nokogiri support]: http://www.nokogiri.org/tutorials/installing_nokogiri.html#mac_os_x
 [uninstall IDE]: http://help.learn.co/the-learn-ide/ide-settings/deleting-the-ide
 [add ssh]: https://help.github.com/en/enterprise/2.15/user/articles/adding-a-new-ssh-key-to-your-github-account
-[Oh My Zsh]: https://github.com/ohmyzsh/ohmyzsh
+[Zsh]: https://en.wikipedia.org/wiki/Z_shell
 [atom]: https://atom.io/
 [octocat gitignore]: https://gist.github.com/octocat/9257657
 [Google Chrome]: https://www.google.com/chrome/
