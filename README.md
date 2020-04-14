@@ -373,13 +373,6 @@ After installing, you can verify everything is working by running `nvm list`. If
 NVM has installed correctly, this will output the existing versions of Node that
 NVM and indicate which version is currently set to default.
 
-### Install Chrome
-
-Install [Google Chrome][] and [make Chrome your default browser][default browser].
-
-[Google Chrome]: https://www.google.com/chrome/
-[default browser]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
-
 ### Dotfiles
 
 Configuration files are often prefixed with the '.' character, hiding them from
