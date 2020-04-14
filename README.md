@@ -179,8 +179,8 @@ get a few important ones.
 
 Git generally comes pre-installed with most operating systems, but you can check
 by running `git version` in the terminal. If this gives you an error or does not
-come back with a version number, you'll need to install Git. you can get using
-Homebrew:
+come back with a version number, you'll need to install Git. you can get it
+using Homebrew:
 
 ```sh
 brew install git
@@ -194,13 +194,19 @@ Now we need to set up the Learn gem. Type the following into your terminal:
 learn whoami
 ```
 
-This will prompt you to set up the Learn gem.
+This will prompt you to set up the Learn gem using a token provided on
+`learn.co`.
 
-Note: When the gem asks you to go to learn.co/your-github-username, you must
-fill your username into the URL and be logged in to be able to retrieve your
-token. At the bottom of the your learn.co user page is an OAuth token. Paste
-this token into the terminal when prompted to connect the Learn gem with your
-account.
+* If you have connected your Github account to your Learn account, navigate to
+  `learn.co/your_github_username`. The OAuth token is at the bottom of the page.
+* If you have not connected your Github account: Go to [your profile][] > Learn
+  Settings > Public Profile. A URL should be listed under **Username**. Navigate
+  to this URL and scroll to the bottom of the page. The OAuth token is at the
+  bottom of the page.
+
+> **Note:** At the end of this lesson is additional troubleshooting information.
+> If you receive an error when running `learn whoami`, please try the steps
+> listed there.
 
 ### Get a Text Editor
 
