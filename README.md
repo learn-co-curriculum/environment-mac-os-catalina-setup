@@ -387,40 +387,21 @@ normal file explorer views - hence 'dotfiles'. Since the default configuration
 of many of the tools we use is somewhat plain, it's helpful to add some
 configuration on top.
 
-These changes are optional, but recommended as they set up a variety of
-convenient and ergonomic features to some of the most common tools you'll use -
-irb , git , and zsh.
+These dotfiles set up a variety of convenient features to some of the most
+common tools you'll use - Zsh and Git.
 
-> **Note** If you ran the automatic install script earlier, your original
-> dotfiles are saved as their filenames plus `.bac` at the end and there is no
-> need to back the files as second time.
-
-If you did not run the automatic install script, you'll first want to back up your
-dotfiles before overwriting them. Run the following commands to do so:
+You'll first want to back up your dotfiles before overwriting them. Run the
+following commands to do so:
 
 ```sh
-mv ~/.irbrc{,.bak}
 mv ~/.gitignore{,.bak}
 mv ~/.zprofile{,.bak}
-mv ~/.zshrc{,.bak}
 mv ~/.gitconfig{,.bak}
 ```
 
 > **Note:** If when you’re trying to back up a file, you get the error `No such
 > file or directory` , don’t worry. This just means you didn’t have that file to
 > start with, so there is nothing to back up.
-
-After changing up the dot files, it is recommended you run
-`rvm get stable --auto-dotfiles`. This will attempt to clear any potential
-[PATH](https://en.wikipedia.org/wiki/PATH_(variable)) related issues.
-
-#### IRB - `~/.irbrc`
-
-To add some additional formating to IRB, run:
-
-```sh
-curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/irbrc" -o "$HOME/.irbrc"
-```
 
 #### Global List of Files for Git to Ignore - `~/.gitignore`
 
@@ -437,26 +418,7 @@ a few others can be added to your own global `.gitignore` file by running:
 curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/ubuntu-gitignore" -o "$HOME/.gitignore"
 ```
 
-#### Setting up NVM and RVM and a Custom Prompt - `.zshrc`
-
-The `~/.zshrc` file contains settings for terminal interaction. It runs every
-time you open a new terminal window. NVM and RVM use this file to ensure they
-are loaded and accessible when a terminal opens.
-
-We can also use  `~/.zshrc` to customize what the prompt looks like. Running the
-following will change your prompt and ensure NVM and RVM are set up to load correctly.
-
-```sh
-curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/.zshrc" -o "$HOME/.zshrc"
-source ~/.zshrc
-```
-
-Additional information on customizing your prompt can be found in the 
-[optional installation instructions][optional].
-
-[optional]: https://github.com/learn-co-curriculum/environment-mac-os-catalina-optional-setup
-
-#### Helpful Zsh Profile Shortcuts - `.zprofile`
+#### Helpful Zsh Shortcuts - `.zprofile`
 
 Your Zsh profile loads up every time you open a terminal window. Learn has a default
 `.zprofile` that is designed to load up a bunch of shortcuts for you as well as make
@@ -465,18 +427,29 @@ the following:
 
 ```sh
 curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/.zprofile" -o "$HOME/.zprofile"
+source ~/.zprofile
 ```
 
 We recommend you take a look at this file and even see if there are any
 shortcuts of your own that you’d like to add!
 
-#### Default Git Configuration File
+#### Setup the Default Git Configuration File
 
-To set up a default `.gitconfig`, run:
+In the next step, we'll configure Git, but before we do, we will setup a default
+configuration file called `.gitconfig`. To get the default `.gitconfig` file,
+run:
 
 ```sh
 curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/gitconfig" -o "$HOME/.gitconfig"
 ```
+
+> **Note:** After changing up the dotfiles, it is recommended you run:
+>
+> ```sh
+> rvm get stable --auto-dotfiles
+> ```
+>
+> This will attempt to clear any potential [PATH][] related issues.
 
 ### Configure Git
 
