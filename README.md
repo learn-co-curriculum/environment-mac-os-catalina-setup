@@ -57,15 +57,18 @@ the installation, you can run `xcode-select -p`. If you see
 
 ### Install Homebrew
 
-Install the Homebrew package manager. You can do this by entering the following
-command into your terminal
+[Homebrew][] is a package manager for the Mac. It allows us to install a number
+of things we will need. To install Homebrew, run the following:
 
 ```sh
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 > **Note:** this is all one line in the terminal (even if it is broken up into
 > two lines here in your browser).
+
+You can verify that Homebrew is successfully installed by running `brew help`. If
+your terminal outputs a list of `brew` commands, you're all set.
 
 ### Install Git
 
@@ -576,3 +579,4 @@ reinstalls them.
 [octocat gitignore]: https://gist.github.com/octocat/9257657
 [Google Chrome]: https://www.google.com/chrome/
 [default chrome]: https://support.google.com/chrome/answer/95417?co=GENIE.Platform%3DDesktop&hl=en
+[Homebrew]: https://brew.sh/
