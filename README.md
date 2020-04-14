@@ -335,30 +335,31 @@ gem install pg
 
 ### Install Node
 
-Later on in the program, we'll want to run JavaScript just like we run ruby. On
+Later on in the program, we'll want to run JavaScript just like we run Ruby. On
 the command line, the program that runs JavaScript files (the 'JavaScript
 Runtime') is called Node.
 
 To manage different versions of Node installed on our computer, we can use
-javascript's equivalent of RVM - NVM. Let's get your node version manager
+JavaScript's equivalent of RVM - NVM. Let's get your Node Version Manager
 installed. Run the following in your terminal:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
 Make sure you do not use `sudo`.
 
-Next, run the following three commands:
+Next, run the following commands:
 
 ```sh
-echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zprofile
-echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.zprofile
-source ~/.zprofile
+echo "$(echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' | cat  - ~/.zshrc)" > ~/.zshrc
+echo "$(echo 'export NVM_DIR="$HOME/.nvm"' | cat - ~/.zshrc)" >> ~/.zshrc
+source ~/.zshrc
 ```
 
-This sets NVM up to be accessible in your terminal. The last command refreshes
-your shell so you won’t have to quit the terminal and open it again.
+This sets NVM up to be accessible in your terminal whenever you open itz. The
+last command refreshes your shell so you won’t have to quit the terminal and
+open it again.
 
 Finally, run the three following commands to install the latest version of Node:
 
@@ -367,6 +368,10 @@ nvm install node
 nvm use node
 nvm alias default node
 ```
+
+After installing, you can verify everything is working by running `nvm list`. If
+NVM has installed correctly, this will output the existing versions of Node that
+NVM and indicate which version is currently set to default.
 
 ### Install Chrome
 
