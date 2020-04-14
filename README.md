@@ -92,6 +92,24 @@ This will install Zsh and set it as the default shell.
 Close your terminal and reopen. If you rerun `echo $SHELL`, the terminal should
 output `/bin/zsh`.
 
+### Install the GMP and GnuPG Packages
+
+Before continuing further, we need to install some libraries that other tools
+rely on, [GMP][] and [GnuPG][]:
+
+```sh
+brew install gmp
+brew install gnupg
+```
+
+> **Note:** If you get this error: `Warning: gnupg-1.4.19 already installed`
+> GnuPG is installed, but it may not be linked properly. To fix, run:
+>
+> ```sh
+> brew link gnupg
+> ```
+
+
 ### Install Git
 
 Git generally comes pre-installed with most operating systems, but you can check
@@ -101,27 +119,6 @@ Homebrew:
 
 ```sh
 brew install git
-```
-
-### Install Support Libraries
-
-Next we need to add a few support libraries:
-
-```sh
-brew install gmp
-```
-
-and
-
-```sh
-brew install gnupg
-```
-
-> **Note:** If you get the following error: Warning: gnupg-1.4.19 already
-> installed, it's just not linked, run:
-
-```sh
-brew link gnupg
 ```
 
 ### Install Ruby Version Manager
