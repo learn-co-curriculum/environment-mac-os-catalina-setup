@@ -33,7 +33,6 @@ detailed instructions on how to properly uninstall the IDE, please read this
 
 ## Step By Step Instructions for Manual Installation
 
-
 ### Install Xcode Command Line Tools
 
 Open up your terminal. You can do this by going to Applications > Utilities >
@@ -595,11 +594,10 @@ Below are some options to try for specific issues.
 
 ## Resources
 
-- [Uninstall the Learn IDE][uninstall IDE]
-- [Adding SSH Key to GitHub][add ssh]
-- [Nokogiri macOS Support][nokogiri support]
-- [Visual Studio Code Download][VS Code]
-
+* [Uninstall the Learn IDE][uninstall IDE]
+* [Adding SSH Key to GitHub][add ssh]
+* [Nokogiri macOS Support][nokogiri support]
+* [Visual Studio Code Download][VS Code]
 
 [VS Code]: https://code.visualstudio.com/Download
 [nokogiri support]: http://www.nokogiri.org/tutorials/installing_nokogiri.html#mac_os_x
