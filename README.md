@@ -4,11 +4,15 @@
 
 This Readme is a step-by-step guide for how to set up your local environment
 **on a Mac**. Please note that these instructions will not work for non-Mac
-users. If you're on a Windows 10 machine, see the [Windows Subsystem for Linux setup instructions](https://github.com/learn-co-curriculum/wsl-setup). If you're on an older windows machine, refer to the [Setting up Linux Virtual Box](https://help.learn.co/en/articles/1489324-setting-up-linux-virtual-box) instructions.
+users. If you're on a Windows 10 machine, see the
+[Windows Subsystem for Linux setup instructions][wsl]. If you're on an older
+Windows machine, refer to the [Setting up Linux Virtual Box][linux]
+instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
-but can upgrade, we recommend doing so before continuing. You can check your
-OS version by clicking the apple menu in the top left and clicking 'About This Mac'.
+but can upgrade, we recommend doing so before continuing. You can check your OS
+version by clicking the apple menu in the top left and clicking 'About This
+Mac'.
 
 If you are unable to upgrade to Catalina, additional instructions are included
 in the steps below.
@@ -21,255 +25,11 @@ Ruby CLI project, or sooner if recommended by an instructor.
 For in-person students, you should move to a local environment at the end of
 Prework, before you start on campus.
 
-## Using the Automatic Installation Script
-
-For convenience, we've written a script that will handle many installation steps
-for us. Follow the steps below to run this script. After the script runs, some
-additional configuration will be needed as described in steps 2 through 7. The
-final step is to run a validation script that will check to see if your environment
-is good to go.
-
-> **Note:** In the event that the automatic installation script fails or the
-> validation script shows some things did not install correctly, manual
-> installation instructions are provided in the second half of this lesson. Use
-> these instructions to install any missing tools.
-
-### Step 0
+## Step 0
 
 First, if you've downloaded the Learn IDE, you will need to uninstall it. For
 detailed instructions on how to properly uninstall the IDE, please read this
 [Help Center article][uninstall IDE].
-
-### Step 1 - Run Automatic Installation Script
-
-Open up your Terminal. The terminal is where we are going to be doing most of our
-installation steps! On Mac, you can open up your terminal by going to
-Applications > Utilities > Terminal, or by using the quick launch (cmd + space)
-and just start typing “Terminal”.
-
-In your terminal, copy, paste, and run the following:
-
-```sh
-curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/automatic-install.sh | bash 2> /dev/null
-```
-
-Many tools will be downloaded and installed so this may take some time. During
-the installation, you will be prompted to install XCode Command Line Tools.
-Agree and allow the install to continue. You may also need to enter your
-computer password in a couple of times.
-
-At the end, if there are no errors, you should see a message indicating the
-installation is complete as well as a few additional steps to take.
-
-```sh
-##########################
-# INSTALLATIONS COMPLETE #
-##########################
-```
-
-If you do not see this message, an error may have occurred during installation.
-In this case, follow the [step-by-step guide below](#step-by-step-instructions-for-manual-installation)
-to manually install the necessary tools.
-
-> **Note:** If you are using a mac that is not on Catalina, you will need to
-> restart terminal to begin using Zsh instead of Bash.
-
-### Step 2 - Configure Git
-
-Git has been installed but still needs to be configured with your personal
-account information. First, run the following to add your GitHub account name:
-
-```sh
-git config --global user.name <YOUR USERNAME>
-```
-
-Replace `<YOUR USERNAME>` with your actual account username. We also want
-to add the email account associated with your account. Run the command below to do so:
-
-```sh
-git config --global user.email <YOUR EMAIL>
-```
-
-You can verify these have been saved by running the same commands without
-providing your information:
-
-```sh
-git config --global user.name
-git config --global user.email
-```
-
-This information is used when you send code from your local machine to
-GitHub.
-
-### Step 3 - Add Your SSH Key to GitHub
-
-Currently, if you were to send code to GitHub (commonly referred to as
-'pushing'), you would be prompted to enter your credentials. To avoid having to
-enter this information every time, you can add an SSH key from your computer to
-GitHub as an alternative way to verify who you are. To see your SSH key, run the
-following command:
-
-```sh
-cat ~/.ssh/id_rsa.pub
-```
-
-Go to https://github.com, sign in, and navigate to SSH and GPG keys in Settings.
-Create a new SSH key and copy and paste your SSH key in.
-
-For more information, check out [GitHub's help article on adding SSH keys][add ssh].
-
-## Step 4 - Configure the Learn Gem
-
-Now we need to set up the Learn gem. Type the following into your terminal:
-
-```sh
-learn whoami
-```
-
-This will prompt you to set up the Learn gem  using a token provided on `learn.co`.
-The gem should ask you to go to `learn.co/your-github-username`. Paste this URL
-in a new browser tab and replace `your-github-username` with your personal GitHub
-username. At the bottom of the page is the token you'll need.
-
-**Note:** At the end of this lesson is additional troubleshooting information. If you
-receive an error when running `learn whoami`, please try the steps listed there.
-
-### Step 5 - Get a Text Editor
-
-Get a Text Editor. We suggest [Visual Studio Code][VS Code]; follow the link to
-download the macOS version.
-
-After downloading and unzipping, make sure to move the Visual Studio Code app
-from your Downloads folder to your Applications folder. Open Finder and navigate
-to Downloads (or wherever you save downloads). If you see Visual Studio Code
-there, make sure to drag it over to Applications.
-
-Once Visual Studio Code is in your Applications folder, launch the program and
-type `command(⌘) + shift(⇧) + p`, and your **Command Palette** will open. In
-your **Command Palette**, type `>shell command`. Select "Shell Command: Install
-'code' command in PATH"
-
-![VS Code Add to Path](https://curriculum-content.s3.amazonaws.com/onboarding/vscode%20path.png)
-
-Next, let's install Visual Studio Code as your default text editor in the
-`.learn-config` file. First, open the config file for Learn in a text editor (Let's
-give Visual Studio Code a try!). If you successfully installed Visual Studio
-Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
-`.learn-config` file should open in VSCode!
-
-Change default editor from `subl` (or `atom`) to `code`. If you have a different
-editor you prefer, you can set it as the default Learn editor in this file.
-
-In `.learn-config`, you can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
-If you want to store labs somewhere else, change this path to point to a different location. Make
-sure the folders you point to exist!
-
-So for instance, if we wanted to set our default lab location to 
-`/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
-there the `Flatiron` folder exists as well as the subfolder `code`. We can do 
-this in the terminal by changing our directory and making the folders:
-
-```sh
-cd  ~
-mkdir Flatiron
-mkdir Flatiron/code
-```
-
-This location setting is only triggered when using the `learn open` command to 
-open a lesson. Some students have encountered Ruby Gem issues when
-working in the default `Development/code` folder, so changing this now may be
-helpful in preventing issues later on.
-
-Save and close the `~/.learn-config` file.
-
-If you would like to use the terminal built-in to VS Code, you may need to update
-the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
-search for `settings.json`.
-
-![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
-
-In this file, you should see opening and closing curly braces `{}` without anything
-inside them. Add the following in between the braces:
-
-```js
-"terminal.integrated.env.osx": {
-    "PATH": ""
-}
-```
-
-If there are already items inside the curly braces, instead of erasing them, you can add a comma
-after the last item and paste in the above setting on a new line. The file should look like this:
-
-```js
-{
-  "terminal.integrated.env.osx": {
-    "PATH": ""
-  }
-}
-```
-
-Or somethings similar to this:
-
-```js
-{
-  "some.other.settings.present": true,
-  "do.not.forget.the.end.comma": true,
-  "terminal.integrated.env.osx": {
-    "PATH": ""
-  }
-}
-```
-
-### Step 6 - Install Support Programs
-
-#### Install Chrome
-
-Install [Google Chrome][] and [make Chrome your default browser][default chrome].
-
-#### Install Slack
-
-Install Slack for Mac and enable desktop notifications for Slack. One week
-before your start date, you will receive an invitation to join the Flatiron
-School workspace, `flatiron-school.slack.com`. You’ll also receive a welcome
-email with information about channels you should join.
-
-### Step 7 - Verify Installations
-
-To verify that you've got everything installed, copy, paste, and run the following command in
-your terminal:
-
-```sh
-curl -so- https://raw.githubusercontent.com/learn-co-curriculum/flatiron-manual-setup-validator/master/manual-setup-check.sh | bash 2> /dev/null
-```
-
-This script will verify that everything you need is installed. If all checks pass,
-you have completed the setup process and can move on!
-
-> **Note** If there are any failed checks, use the manual install instructions
-> below to install everything one at a time.
-
-...
-
-...
-
-...
-
-...
-
-...
-
-...
-
-# STOP!
-
-The instructions below are provided if the automatic install script fails, the
-validation script indicates incomplete installations, or you would prefer to
-manually step through the installation process. Some steps above are repeated in
-the instructions below.
-
-**If you ran the validation script above and everything passes, you do not need
-to continue reading and can move on to the next lesson**
 
 ## Step By Step Instructions for Manual Installation
 
