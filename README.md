@@ -457,7 +457,7 @@ Replace `"you@example.com"` with the email tied to your GitHub account and
 `"Your Name"` with your GitHub username. Git will use this email and name as the
 author for all the changes you make.
 
-**Recommended:** While we're configuring GitHub, we should add a new SSH key.
+**IMPORTANT:** While we're configuring GitHub, we should add a new SSH key.
 Setting this key up will keep you from having to provide your username
 and password whenever you use the terminal to interact with GitHub.
 
@@ -472,8 +472,8 @@ and password whenever you use the terminal to interact with GitHub.
   you already have an SSH key, and you do not want to overwrite it.
 
 Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out.
-Follow the [instructions provided by GitHub][add ssh] and add this key to your
-GitHub account
+**Follow the [instructions provided by GitHub][add ssh] and add this key to your
+GitHub account**
 
 #### Install Chrome
 
