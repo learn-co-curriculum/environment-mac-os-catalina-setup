@@ -157,6 +157,24 @@ time to make sure everything is working.
 > following the troubleshooting steps at the end of this lesson before
 > continuing.
 
+### Install Some Ruby Gems
+
+Ruby gems are pre-written, stand-alone, chunks of code that have been made
+easily accessible to you. We'll use a lot of them soon, but for now, we should
+get a few important ones.
+
+* First, let's update our system gems by running `gem update --system`
+* Next, install the Learn gems. Do this by running `gem install learn-co`. This
+  gem gives us access to `learn` and `learn submit` commands for labs.
+* Install the Bundler gem with `gem install bundler`. This gem takes care of
+  installing other gems you will need for projects.
+* Install Nokogiri with `gem install nokogiri` - Nokogiri is a gem to help parse
+  HTML - useful when we want to scrape websites. If you encounter any errors
+  while installing it, [check out the Nokogiri support docs][nokogiri support]
+  for Mac OSX.
+* Install Ruby on Rails with `gem install rails` - [Rails][] is used for
+  building out full web applications. We will learn much more about Rails soon.
+
 ### Install Git
 
 Git generally comes pre-installed with most operating systems, but you can check
@@ -167,21 +185,6 @@ Homebrew:
 ```sh
 brew install git
 ```
-
-### Install Some Ruby Gems
-
-Ruby gems are pre-written, stand-alone, chunks of code that have been made
-easily accessible to you. We'll use a lot of them soon, but for now, we should
-get a few important ones.
-
-* First, let's update our system gems by running `gem update --system`
-* Next, install the Learn gems. Do this by running `gem install learn-co`
-* Install the Bundler gem. This gem takes care of installing other gems you need
-  for projects: `gem install bundler`
-* Install Nokogiri with `gem install nokogiri` - Nokogiri is a gem to help parse
-  HTML - useful when we want to scrape websites. If you encounter any errors
-  while installing it, [check out the Nokogiri support docs][nokogiri support]
-  for Mac OSX.
 
 ### Set Up the Learn gem
 
@@ -318,14 +321,6 @@ To install Postgres, run the following commands:
 brew install postgres
 brew services start postgresql
 gem install pg
-```
-
-### Install Rails
-
-Finally, Rails! The powerful Ruby web framework. We can install it with
-
-```sh
-gem install rails
 ```
 
 ### Install Node
