@@ -210,29 +210,29 @@ This will prompt you to set up the Learn gem using a token provided on
 
 ### Get a Text Editor
 
-Modern text editors come with features that can be very helpful when starting
-out as a programmer. We suggest [Visual Studio Code][VS Code]; follow the link to
+Get a Text Editor. We suggest [Visual Studio Code][VS Code]; follow the link to
 download the macOS version.
 
 After downloading and unzipping, make sure to move the Visual Studio Code app
-from your Downloads folder to your Applications folder. Open finder and navigate
+from your Downloads folder to your Applications folder. Open Finder and navigate
 to Downloads (or wherever you save downloads). If you see Visual Studio Code
-there, make sure to drag it over to Applications.
+there, drag it over to Applications.
 
 Once Visual Studio Code is in your Applications folder, launch the program and
-type ⇧⌘P. Your Command Palette will open. In your Command Palette type  `>shell`
-and select the option **"Shell Command: Install 'code' command in PATH"**. This
-will allow you to use the `code` command in your terminal to open files in VS
-Code.
+type `command(⌘) + shift(⇧) + p`, and your **Command Palette** will open. In
+your **Command Palette**, type `>shell command`. Select "Shell Command: Install
+'code' command in PATH"
+
+![VS Code Add to Path](https://curriculum-content.s3.amazonaws.com/onboarding/vscode%20path.png)
 
 Next, let's install Visual Studio Code as your default text editor in the
-learn-config file. First, open the config file for Learn in a text editor (Let's
+`.learn-config` file. First, open the config file for Learn in a text editor (Let's
 give Visual Studio Code a try!). If you successfully installed Visual Studio
 Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 `.learn-config` file should open in VSCode!
 
-With the `.learn-config` file open, we can make a small change. Change default
-editor from `subl` (or whatever it may be) to `code`.
+Change default editor from `subl` (or `atom`) to `code`. If you have a different
+editor you prefer, you can set it as the default Learn editor in this file.
 
 > **Note:** [Atom][atom] is also a popular editor option. If you would prefer to
 > use Atom over VS Code, you can. Just make sure that the `~/.learn-config` file
@@ -241,15 +241,12 @@ editor from `subl` (or whatever it may be) to `code`.
 > different editor you prefer, you can set also it as the default learn editor
 > in this file.
 
-In `.learn-config`, you can also set the default location where Learn will save all your labs. By
-default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
-If you want to store labs somewhere else, change this path to point to a different location. Make
-sure the folders you point to exist!
-
-So for instance, if we wanted to set our default lab location to 
-`/Users/<your-computer-username>/Flatiron/code`, we would first make sure 
-there the `Flatiron` folder exists as well as the subfolder `code`. We can do 
-this in the terminal by changing our directory and making the folders:
+In `.learn-config`, you can also set the default location where Learn will save
+all your labs. By default, the Learn directory is set to
+`/Users/<your-computer-username>/Development/code`. However, some students have
+reported issues using Ruby Gems when working in this folder. To avoid this
+potential problem, let's make a new folder and set it as the default location.
+instead of `Development/code`, lets make a `Flatiron/code` folder:
 
 ```sh
 cd  ~
@@ -257,21 +254,27 @@ mkdir Flatiron
 mkdir Flatiron/code
 ```
 
-This location setting is only triggered when using the `learn open` command to 
-open a lesson. Some students have encountered Ruby Gem issues when
-working in the default `Development/code` folder, so changing this now may be
-helpful in preventing issues later on.
+Then, in `.learn-config`, change the Learn directory to
+`/Users/<your-computer-username>/Flatiron/code`. If you want to store labs
+somewhere else, change this path to point to the desired location. Make sure the
+folders you point to exist!
 
-Save and close the `~/.learn-config` file.
+This location setting is only triggered when using the `learn open` command to
+open a lesson. Save and close the `~/.learn-config` file.
 
-If you would like to use the terminal built-in to VS Code, you may need to update
-the settings. To do this, while in VS Code, press `command(⌘) + shift(⇧) + p` and
-search for `settings.json`.
+#### Optional VS Code Terminal Setup
+
+If you would like to use the terminal built into VS Code, you may need to update
+the settings. If you intend to use your regular terminal, you do not need to
+complete this step.
+
+To update VS Code's terminal settings, while in VS Code, press
+`command(⌘) + shift(⇧) + p` and search for `settings.json`.
 
 ![VS Code settings.json](https://curriculum-content.s3.amazonaws.com/onboarding/vs%20code%20settings.png)
 
-In this file, you should see opening and closing curly braces `{}` without anything
-inside them. Add the following in between the braces:
+In this file, you should see opening and closing curly braces `{}` without
+anything inside them. Add the following in between the braces:
 
 ```js
 "terminal.integrated.env.osx": {
@@ -279,8 +282,9 @@ inside them. Add the following in between the braces:
 }
 ```
 
-If there are already items inside the curly braces, instead of erasing them, you can add a comma
-after the last item and paste in the above setting on a new line. The file should look like this:
+If there are already items inside the curly braces, instead of erasing them, you
+can add a comma after the last item and paste in the above setting on a new
+line. The file should look like this:
 
 ```js
 {
@@ -307,7 +311,7 @@ Or somethings similar to this:
 You’ll be using a couple of different databases as you move through the web
 development track. The default database that Rails uses is SQLite.
 
-To set up SQLite, run
+To set up SQLite, run:
 
 ```sh
 brew install sqlite
