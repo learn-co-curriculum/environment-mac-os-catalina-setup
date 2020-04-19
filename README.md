@@ -160,6 +160,13 @@ Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 Change default editor from `subl` (or `atom`) to `code`. If you have a different
 editor you prefer, you can set it as the default Learn editor in this file.
 
+If your `.learn-config` is blank, or is missing, use this template, make your changes and save it in your root (~) directory.
+```
+---
+:learn_directory: "/home/yourname/code/labs"
+:editor: 'code'
+```
+
 In `.learn-config`, you can also set the default location where Learn will save all your labs. By
 default, the Learn directory is set to `/Users/<your-computer-username>/Development/code`.
 If you want to store labs somewhere else, change this path to point to a different location. Make
