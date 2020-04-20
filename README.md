@@ -134,8 +134,8 @@ Once downloaded, use the following command to download RVM and reload the
 curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
 ```
 
-Once RVM is installed, close and reopen your terminal. Next, we will install the
-Ruby version we'll be using and set it to the default:
+Once RVM is installed, run `rvm reload` **or** close and reopen your terminal to make sure RVM is fully
+loaded. Next, we will install the Ruby version we'll be using and set it to the default:
 
 ```sh
 rvm install 2.6.1
@@ -171,6 +171,9 @@ get a few important ones.
   HTML - useful when we want to scrape websites. If you encounter any errors
   while installing it, [check out the Nokogiri support docs][nokogiri support]
   for Mac OSX.
+* Install Pry with `gem install pry`. You may have already used Pry during the
+  Prework while using the in-browser IDE. Installing Pry here will make it available
+  for projects in your local environment.
 * Install Ruby on Rails with `gem install rails` - [Rails][] is used for
   building out full web applications. We will learn much more about Rails soon.
 
