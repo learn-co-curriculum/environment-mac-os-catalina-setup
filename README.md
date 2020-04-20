@@ -606,6 +606,25 @@ Below are some options to try for specific issues.
    you will only need the `learn-co` and `bundler` gems, so this reinstalls
    them.
 
+### `learn` Commands Produce `psych` Gem Errors
+
+This error is typically due to issues in the `~/.learn-config` file. 
+
+1.  Run `code ~/.learn-config`. This file should only have three lines in it, 
+    similar to the example below:
+
+    ```sh
+    ---
+    :learn_directory: "/Users/< username >/Flatiron/code"
+    :editor: code
+    ```
+
+2.  Check for any typos or extra content. Make sure the `:learn_directory` path
+    is valid and has your computer's username after `/Users/`. You can confirm this
+    name by running `echo $HOME`. 
+
+3.  Save the `.learn-config` file and try running `learn whoami`. 
+
 ## Resources
 
 * [Uninstall the Learn IDE][uninstall IDE]
