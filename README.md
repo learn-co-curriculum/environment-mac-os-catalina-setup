@@ -187,7 +187,7 @@ get a few important ones.
   building out full web applications. We will learn much more about Rails soon.
 
 Before continuing, check to make sure the `learn-co` gem was properly installed. Run
-`learn` in the terminal. If you're in your home directory (`cd ~`), running learn should
+`learn` in the terminal. If you're in your home directory (`cd ~`), running `learn` should
 produce the following message:
 
 ```sh
