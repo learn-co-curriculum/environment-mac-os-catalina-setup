@@ -653,3 +653,4 @@ This error is typically due to issues in the `~/.learn-config` file.
 [Xcode]: https://developer.apple.com/xcode/
 [Rails]: https://rubyonrails.org/
 [PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
+[shell]: https://en.wikipedia.org/wiki/Shell_%28computing%29
