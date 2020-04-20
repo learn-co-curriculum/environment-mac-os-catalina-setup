@@ -10,12 +10,11 @@ Windows machine, refer to the [Setting up Linux Virtual Box][linux]
 instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
-but can upgrade, we recommend doing so before continuing. You can check your OS
-version by clicking the apple menu in the top left and clicking 'About This
-Mac'.
+but can upgrade, we recommend doing so _after_ following the instructions below.
+Additional instructions are included in the steps below for non-Catalina users. 
 
-If you are unable to upgrade to Catalina, additional instructions are included
-in the steps below.
+You can check your OS version by clicking the apple menu in the top left and
+clicking 'About This Mac'.
 
 ## When to Move to a Local Environment
 
