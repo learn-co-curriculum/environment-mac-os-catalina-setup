@@ -49,9 +49,18 @@ xcode-select --install
 ```
 
 You will be prompted to install Xcode Command-Line Tools. Agree and allow the
-install to continue. You may need to provide your computer's password. To verify
-the installation, you can run `xcode-select -p`. If you see
-`/Applications/Xcode.app/Contents/Developer`, Xcode is ready to go.
+install to continue. You may need to provide your computer's password. 
+
+> **Important:** If the Xcode Command-Line Tools aren't installed, you may encounter
+> errors later on when working with gems like `sqlite3`. To double check that everything is installed,
+> rerun the `xcode-select --install` command. If everything is installed, you should see this error:
+>
+> ```sh
+> xcode-select: error: command line tools are already installed, use "Software Update" to install updates
+> ```
+>
+> If you receive this error, you are good to continue!
+
 
 ### Install Homebrew
 
