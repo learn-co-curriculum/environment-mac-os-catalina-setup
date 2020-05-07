@@ -42,7 +42,7 @@ The first tools we're going to install are the Xcode command-line tools.
 [Xcode][] is a suite of development tools from Apple, including tools for
 building Mac and iPhone applications. For this course, we only need the Xcode
 command-line tools, as many other tools rely on them. Run the following to
-install the them:
+install them:
 
 ```sh
 xcode-select --install
@@ -109,7 +109,7 @@ brew install gmp
 brew install gnupg
 ```
 
-> **Note:** If you get this error: `Warning: gnupg-1.4.19 already installed`
+> **Note:** If you get this error: `Warning: gnupg-1.4.19 already installed`,
 > GnuPG is installed, but it may not be linked properly. To fix, run:
 >
 > ```sh
@@ -146,14 +146,14 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703
 > command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 > ```
 
-Once downloaded, use the following command to download RVM:
+Once the encryption keys are downloaded, use the following command to download RVM:
 
 ```sh
 curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
 ```
 
-With RVM is installed, run `rvm reload` **or** close and reopen your terminal to make sure RVM is fully
-loaded. Next, we will install the Ruby version we'll be using and set it to the default:
+When RVM is installed, run `rvm reload` **or** close and reopen your terminal to make sure RVM is fully
+loaded. Next, we will install the Ruby version we'll be using and set it as the default:
 
 ```sh
 rvm install 2.6.1
@@ -162,7 +162,7 @@ rvm use 2.6.1 --default
 
 To check that everything worked, run `rvm list`. You should see `=* ruby-2.6.1`
 listed, indicating that `2.6.1` is installed and set as the default version for
-Ruby. You can also run `ruby -v`, which shold show that Ruby `2.6.1` is the
+Ruby. You can also run `ruby -v`, which should show that Ruby `2.6.1` is the
 current version of Ruby being used.
 
 [RVM]: https://rvm.io/
@@ -181,7 +181,7 @@ easily accessible to you. We'll use a lot of them soon, but for now, we should
 get a few important ones.
 
 * First, let's update our system gems by running `gem update --system`
-* Next, install the Learn gems. Do this by running `gem install learn-co`. This
+* Next, install the Learn gem. Do this by running `gem install learn-co`. This
   gem gives us access to `learn` and `learn submit` commands for labs.
 * Install the Bundler gem with `gem install bundler`. This gem takes care of
   installing other gems you will need for projects.
@@ -257,7 +257,7 @@ your **Command Palette**, type `>shell command`. Select "Shell Command: Install
 ![VS Code Add to Path](https://curriculum-content.s3.amazonaws.com/onboarding/vscode%20path.png)
 
 Next, let's install Visual Studio Code as your default text editor in the
-`.learn-config` file. First, open the config file for Learn in a text editor (Let's
+`.learn-config` file. First, open the config file for Learn in a text editor (let's
 give Visual Studio Code a try!). If you successfully installed Visual Studio
 Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 `.learn-config` file should open in VSCode!
@@ -269,7 +269,7 @@ editor you prefer, you can set it as the default Learn editor in this file.
 > use Atom over VS Code, you can. Just make sure that the `~/.learn-config` file
 > has the correct editor. For VS Code, the file should include `:editor: code`,
 > but for Atom users, this line should read: `:editor: atom`. If you have a
-> different editor you prefer, you can set also it as the default learn editor
+> different editor you prefer, you can set it as the default learn editor
 > in this file.
 
 In `.learn-config`, you can also set the default location where Learn will save
@@ -325,7 +325,7 @@ line. The file should look like this:
 }
 ```
 
-Or somethings similar to this:
+Or something similar to this:
 
 ```js
 {
@@ -388,7 +388,7 @@ echo "$(echo 'export NVM_DIR="$HOME/.nvm"' | cat - ~/.zshrc)" >> ~/.zshrc
 source ~/.zshrc
 ```
 
-This sets NVM up to be accessible in your terminal whenever you open itz. The
+This sets NVM up to be accessible in your terminal whenever you open it. The
 last command refreshes your shell so you won’t have to quit the terminal and
 open it again.
 
@@ -401,8 +401,8 @@ nvm alias default node
 ```
 
 After installing, you can verify everything is working by running `nvm list`. If
-NVM has installed correctly, this will output the existing versions of Node that
-NVM and indicate which version is currently set to default.
+NVM has installed correctly, this will output the existing versions of Node and 
+indicate which version is currently set to default.
 
 ### Dotfiles
 
@@ -424,7 +424,7 @@ mv ~/.gitconfig{,.bak}
 ```
 
 > **Note:** If when you’re trying to back up a file, you get the error `No such
-> file or directory` , don’t worry. This just means you didn’t have that file to
+> file or directory`, don’t worry. This just means you didn’t have that file to
 > start with, so there is nothing to back up.
 
 #### Global List of Files for Git to Ignore - `~/.gitignore`
@@ -454,12 +454,12 @@ curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/.zprofil
 source ~/.zprofile
 ```
 
-We recommend you take a look at this file and even see if there are any
+We recommend you take a look at this file and see if there are any
 shortcuts of your own that you’d like to add!
 
-#### Setup the Default Git Configuration File
+#### Set up the Default Git Configuration File
 
-In the next step, we'll configure Git, but before we do, we will setup a default
+In the next step, we'll configure Git, but before we do, we will set up a default
 configuration file called `.gitconfig`. To get the default `.gitconfig` file,
 run:
 
@@ -482,11 +482,11 @@ First, you need to let Git know who you are. You can do this by running:
 
 ```sh
 git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+git config --global user.name "Your Username"
 ```
 
 Replace `"you@example.com"` with the email tied to your GitHub account and
-`"Your Name"` with your GitHub username. Git will use this email and name as the
+`"Your Username"` with your GitHub username. Git will use this email and name as the
 author for all the changes you make.
 
 **IMPORTANT:** While we're configuring GitHub, we should add a new SSH key.
@@ -495,7 +495,7 @@ and password whenever you use the terminal to interact with GitHub.
 
 * First, check if you already have an SSH key by running
   `cat ~/.ssh/id_rsa.pub`. If the terminal prints out a long string of
-  characters starting with `ssh-rsa`, you've already got a string and can skip
+  characters starting with `ssh-rsa`, you've already got a key and can skip
   the next bullet
 * If the last command does not print anything, run `ssh-keygen` to create a
   new SSH key. You should be prompted to select a location and passphrase for
