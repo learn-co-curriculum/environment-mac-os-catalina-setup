@@ -262,8 +262,16 @@ give Visual Studio Code a try!). If you successfully installed Visual Studio
 Code and its shell commands, type `code ~/.learn-config` in your terminal. Your
 `.learn-config` file should open in VSCode!
 
-Change default editor from `subl` (or `atom`) to `code`. If you have a different
-editor you prefer, you can set it as the default Learn editor in this file.
+If your `.learn-config` is blank, or is missing, use the following template. Make your
+changes and save it in your root (`~`) directory.
+
+```sh
+---
+:learn_directory: "/home/<your-computer-username>/Flatiron/code"
+:editor: 'code'
+```
+
+Change default editor from `subl` (or `atom`) to `code`.
 
 > **Note:** [Atom][atom] is also a popular editor option. If you would prefer to
 > use Atom over VS Code, you can. Just make sure that the `~/.learn-config` file
