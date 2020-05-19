@@ -267,7 +267,7 @@ changes and save it in your root (`~`) directory.
 
 ```sh
 ---
-:learn_directory: "/home/<your-computer-username>/Flatiron/code"
+:learn_directory: "/Users/<your-computer-username>/Flatiron/code"
 :editor: 'code'
 ```
 
