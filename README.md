@@ -1,4 +1,4 @@
-# Mac OSX Manual Environment Set Up
+# Mac OSX Local Environment Setup Instructions
 
 ## Introduction
 
@@ -11,18 +11,15 @@ instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
 but can upgrade, we recommend doing so _after_ following the instructions below.
-Additional instructions are included in the steps below for non-Catalina users. 
+Additional instructions are included in the steps below for non-Catalina users.
 
 You can check your OS version by clicking the apple menu in the top left and
 clicking 'About This Mac'.
 
 ## When to Move to a Local Environment
 
-For online students, you should switch to a local environment after your
-Ruby CLI project, or sooner if recommended by an instructor.
-
-For in-person students, you should move to a local environment at the end of
-Prework, before you start on campus.
+To ensure you can access and complete the assignments in this course,
+switching to a local environment at the start of the course is best.
 
 ## Step 0
 
