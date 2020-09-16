@@ -126,12 +126,6 @@ projects.
 The following command downloads encryption keys we need to install RVM:
 
 ```sh
-gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-```
-
-If you get an error that gpg2 is not found, try with this command instead:
-
-```sh
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
@@ -149,7 +143,7 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703
 Once the encryption keys are downloaded, use the following command to download RVM:
 
 ```sh
-curl -sSL https://get.rvm.io | bash -s stable --ruby --auto-dotfiles
+curl -sSL https://get.rvm.io | bash
 ```
 
 When RVM is installed, run `rvm reload` **or** close and reopen your terminal to make sure RVM is fully
