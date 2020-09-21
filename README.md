@@ -267,7 +267,10 @@ on your computer _at_ your computer's name.
 Give your key a descriptive title and submit it to finish the configuration.
 
 **If you encountered any issues while configuring Git, follow the
-[instructions provided by GitHub][add ssh] for additional information**
+[instructions provided by GitHub][add ssh] for additional information.** For additional
+info on configuring Git, [check out the community maintained documentation][git-scm].
+
+[git-scm]: https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_first_time
 
 ### Set Up the Learn gem
 
@@ -480,7 +483,6 @@ following commands to do so:
 ```sh
 mv ~/.gitignore{,.bak}
 mv ~/.zprofile{,.bak}
-mv ~/.gitconfig{,.bak}
 ```
 
 > **Note:** If when you’re trying to back up a file, you get the error `No such
@@ -516,16 +518,6 @@ source ~/.zprofile
 
 We recommend you take a look at this file and see if there are any
 shortcuts of your own that you’d like to add!
-
-#### Set up the Default Git Configuration File
-
-In the next step, we'll configure Git, but before we do, we will set up a default
-configuration file called `.gitconfig`. To get the default `.gitconfig` file,
-run:
-
-```sh
-curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/gitconfig" -o "$HOME/.gitconfig"
-```
 
 > **Note:** After changing up the dotfiles, it is recommended you run:
 >
@@ -670,6 +662,28 @@ This error is typically due to issues in the `~/.learn-config` file.
     name by running `echo $HOME`. 
 
 3.  Save the `.learn-config` file and try running `learn whoami`.
+
+### Troubleshooting Git Configuration
+
+If you have any issues with setting up Git or connecting your local machine to
+GitHub, we recommend checking out [GitHub's help documentation][github help] for
+a more thorough walkthrough of the installation and configuration process.
+
+[github help]: https://docs.github.com/en/github
+
+You can reset your Git configuration by running the following:
+
+```sh
+mv ~/.gitconfig{,.bak}
+curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/gitconfig" -o "$HOME/.gitconfig"
+```
+
+The above command will erase your settings, so make sure to re-add your username and email after:
+
+```sh
+git config --global user.email "you@example.com"
+git config --global user.name "Your Username"
+```
 
 ## Resources
 
