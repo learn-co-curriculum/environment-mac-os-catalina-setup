@@ -211,6 +211,60 @@ using Homebrew:
 brew install git
 ```
 
+### Configure Git
+
+Git is a version control system that will play an important role in keeping
+track of the code we write. Git collaborates with [GitHub][github], so with Git
+installed, we now want to connect it to a GitHub account. If you don't have an
+account, [sign up for one][join] before continuing.
+
+[join]: https://github.com/join
+
+To get started with configuration, we first need to let Git know who you are.
+You can do this by running:
+
+```sh
+git config --global user.email "you@example.com"
+git config --global user.name "Your Username"
+```
+
+Replace `"you@example.com"` with the email tied to your GitHub account and
+`"Your Username"` with your GitHub username. Git will use this email and name as
+the author for all the changes you make.
+
+**IMPORTANT:** While we're configuring GitHub, we should add a new SSH key.
+Setting this key up will keep you from having to provide your username
+and password whenever you use the terminal to interact with GitHub.
+
+* First, check if you already have an SSH key by running
+  `cat ~/.ssh/id_rsa.pub`. If the terminal prints out a long string of
+  characters starting with `ssh-rsa`, you've already got a key and can skip
+  the next bullet
+* If the last command does not print anything, run `ssh-keygen` to create a
+  new SSH key. You should be prompted to select a location and passphrase for
+  your new key. Leave everything blank and press enter for the default
+  location and no passphrase. If you’re asked if you want to overwrite, then
+  you already have an SSH key, and you do not want to overwrite it.
+
+Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out.
+
+Now, with your key copied, head over to [GitHub][github] and log in to your
+account. Click your avatar in the upper right corner to bring up an account
+menu, then click **Settings**. You will be redirected to your account settings
+page. On this page is a navigation item, **SSH and GPG keys**. Click this and
+then click **New SSH key**. A form will appear where you can paste your key.
+
+![example add ssh](https://curriculum-content.s3.amazonaws.com/onboarding/add%20ssh%20key.png)
+
+Make sure the key is fully copied. It should start with `ssh-rsa` and end with
+what looks like an email address, but is actually the account you're logged into
+on your computer _at_ your computer's name.
+
+Give your key a descriptive title and submit it to finish the configuration.
+
+**If you encountered any issues while configuring Git, follow the
+[instructions provided by GitHub][add ssh] for additional information**
+
 ### Set Up the Learn gem
 
 Now we need to set up the Learn gem. Type the following into your terminal:
@@ -477,38 +531,6 @@ curl "https://raw.githubusercontent.com/flatiron-school/dotfiles/master/gitconfi
 >
 > This will attempt to clear any potential [PATH][] related issues.
 
-### Configure Git
-
-With Git installed, we now want to configure it using your own account.
-First, you need to let Git know who you are. You can do this by running:
-
-```sh
-git config --global user.email "you@example.com"
-git config --global user.name "Your Username"
-```
-
-Replace `"you@example.com"` with the email tied to your GitHub account and
-`"Your Username"` with your GitHub username. Git will use this email and name as the
-author for all the changes you make.
-
-**IMPORTANT:** While we're configuring GitHub, we should add a new SSH key.
-Setting this key up will keep you from having to provide your username
-and password whenever you use the terminal to interact with GitHub.
-
-* First, check if you already have an SSH key by running
-  `cat ~/.ssh/id_rsa.pub`. If the terminal prints out a long string of
-  characters starting with `ssh-rsa`, you've already got a key and can skip
-  the next bullet
-* If the last command does not print anything, run `ssh-keygen` to create a
-  new SSH key. You should be prompted to select a location and passphrase for
-  your new key. Leave everything blank and press enter for the default
-  location and no passphrase. If you’re asked if you want to overwrite, then
-  you already have an SSH key, and you do not want to overwrite it.
-
-Run `cat ~/.ssh/id_rsa.pub` once more and copy the key that is printed out.
-**Follow the [instructions provided by GitHub][add ssh] and add this key to your
-GitHub account**
-
 ### Install Chrome
 
 Install [Google Chrome][] and [make Chrome your default browser][default chrome].
@@ -643,7 +665,7 @@ This error is typically due to issues in the `~/.learn-config` file.
     is valid and has your computer's username after `/Users/`. You can confirm this
     name by running `echo $HOME`. 
 
-3.  Save the `.learn-config` file and try running `learn whoami`. 
+3.  Save the `.learn-config` file and try running `learn whoami`.
 
 ## Resources
 
@@ -674,3 +696,4 @@ This error is typically due to issues in the `~/.learn-config` file.
 [Rails]: https://rubyonrails.org/
 [PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
 [shell]: https://en.wikipedia.org/wiki/Shell_%28computing%29
+[github]: https://github.com/
