@@ -40,15 +40,16 @@ Terminal, or by using the quick launch (`cmd` + `space`) and just start typing
 
 The first tools we're going to install are the Xcode Command Line Tools.
 [Xcode][] is a suite of development tools from Apple, including tools for
-building Mac and iPhone applications. For this course, we only need the command
-line tools, as many other tools rely on them. Run the following to install them:
+building Mac and iPhone applications. We only need the command line tools, as
+many other tools rely on them, so we can skip downloading all of Xcode. Run the
+following to install them:
 
 ```sh
 xcode-select --install
 ```
 
 You will be prompted to install Xcode Command  Line Tools. Agree and allow the
-install to continue. You may need to provide your computer's password. 
+install to continue. You may need to provide your computer's password.
 
 > **Important:** If the Xcode Command Line Tools aren't installed, you may encounter
 > errors later on when working with gems like `sqlite3`. To double check that everything is installed,
@@ -144,7 +145,7 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703
 > command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 > ```
 
-Once the encryption keys are downloaded, use the following command to download RVM:
+Once the encryption keys download, use the following command to download RVM:
 
 ```sh
 curl -sSL https://get.rvm.io | bash
@@ -268,7 +269,7 @@ Give your key a descriptive title and submit it to finish the configuration.
 
 **If you encountered any issues while configuring Git, follow the
 [instructions provided by GitHub][add ssh] for additional information.** For additional
-info on configuring Git, [check out the community maintained documentation][git-scm].
+info on configuring Git, [check out the community-maintained documentation][git-scm].
 
 [git-scm]: https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#_first_time
 
