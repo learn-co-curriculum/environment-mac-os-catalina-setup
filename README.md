@@ -11,7 +11,7 @@ instructions.
 
 The following instructions are for macOS Catalina. If you are not on Catalina
 but can upgrade, we recommend doing so _after_ following the instructions below.
-Additional instructions are included in the steps below for non-Catalina users. 
+Additional instructions are included in the steps below for non-Catalina users.
 
 You can check your OS version by clicking the apple menu in the top left and
 clicking 'About This Mac'.
@@ -38,20 +38,19 @@ Open up your terminal. You can do this by going to Applications > Utilities >
 Terminal, or by using the quick launch (`cmd` + `space`) and just start typing
 “Terminal”.
 
-The first tools we're going to install are the Xcode command-line tools.
+The first tools we're going to install are the Xcode Command Line Tools.
 [Xcode][] is a suite of development tools from Apple, including tools for
-building Mac and iPhone applications. For this course, we only need the Xcode
-command-line tools, as many other tools rely on them. Run the following to
-install them:
+building Mac and iPhone applications. For this course, we only need the command
+line tools, as many other tools rely on them. Run the following to install them:
 
 ```sh
 xcode-select --install
 ```
 
-You will be prompted to install Xcode Command-Line Tools. Agree and allow the
+You will be prompted to install Xcode Command  Line Tools. Agree and allow the
 install to continue. You may need to provide your computer's password. 
 
-> **Important:** If the Xcode Command-Line Tools aren't installed, you may encounter
+> **Important:** If the Xcode Command Line Tools aren't installed, you may encounter
 > errors later on when working with gems like `sqlite3`. To double check that everything is installed,
 > rerun the `xcode-select --install` command. If everything is installed, you should see this error:
 >
@@ -61,6 +60,11 @@ install to continue. You may need to provide your computer's password.
 >
 > If you receive this error, you are good to continue!
 
+If you encounter any errors while installing the Command Line Tools, you can
+also directly download the tools from the Apple Developer site. Go to
+[https://developer.apple.com/download/more/](https://developer.apple.com/download/more/)
+and search for `xcode`. Sort the results by *Release Date* and download the
+latest 'Command Line Tools for Xcode' option.
 
 ### Install Homebrew
 
