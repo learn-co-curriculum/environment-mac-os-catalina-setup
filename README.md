@@ -484,11 +484,11 @@ First, you need to let Git know who you are. You can do this by running:
 
 ```sh
 git config --global user.email "you@example.com"
-git config --global user.name "Your Username"
+git config --global user.name "Your full name"
 ```
 
 Replace `"you@example.com"` with the email tied to your GitHub account and
-`"Your Username"` with your GitHub username. Git will use this email and name as the
+`"Your Username"` with your full name. Git will use this email and name as the
 author for all the changes you make.
 
 **IMPORTANT:** While we're configuring GitHub, we should add a new SSH key.
