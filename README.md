@@ -32,6 +32,16 @@ detailed instructions on how to properly uninstall the IDE, please read this
 
 ## Step By Step Instructions for Manual Installation
 
+## ALERT - For New M1 Mac Laptops ONLY
+
+If you are using a Mac laptop with the new M1 chip (released in late 2020), there is
+an additional step required for some tools to install correctly. This step involves
+creating a copy of your laptop's Terminal application and enabling it to work with
+tools that aren't yet compatible with the M1 chip. Check out [this link][m1]
+and follow the steps provided **before continuing**.
+
+[m1]: https://www.notion.so/Run-x86-Apps-including-homebrew-in-the-Terminal-on-Apple-Silicon-8350b43d97de4ce690f283277e958602
+
 ### Install Xcode Command Line Tools
 
 Open up your terminal. You can do this by going to Applications > Utilities >
