@@ -72,7 +72,7 @@ install to continue. You may need to provide your computer's password.
 > If you receive this error, you are good to continue!
 
 If you have recently updated your OS to Catalina 10.15.2 or are on BigSur, you may encounter some errors
-related to XCode while intsalling Ruby and/or running Node. While working through this set up, follow any
+related to XCode while installing Ruby and/or running Node. While working through this set up, follow any
 debugging instructions provided, but if those do not work, check out the 
 [instructions here to make sure the Xcode Command-Line Tools are configured correctly on the new system][xcode fix] 
 
